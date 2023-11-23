@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The 1975 by Jung Sek</title>
+<link href="C:\Users\jungs\styles.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet"
+href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+<style>
+    * {
+  box-sizing: border-box;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  font-size: 30px;
+  text-align: center;
+}
+
+.flex-item-left {
+  background-color: #f1f1f1;
+  padding: 10px;
+  flex: 50%;
+}
+
+.flex-item-right {
+  background-color: dodgerblue;
+  padding: 10px;
+  flex: 50%;
+}
+
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+
+<body>
+
+    <div id="backgroundsong">
+      <audio controls autoplay>
+        <source src="The_1975_-_About_You.mp3" type="audio/ogg">
+        <source src="The_1975_-_About_You.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+      </audio>
+    </div>
+    
+    <main id="mainContent">
+      <header> 
+        <nav id="topnav">
+          <a class="active" href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="tours.html">Tours</a>
+          <a href="merch.html">Merch</a>
+        </nav>
+        <div id="1975logo">
+            <img src="The 1975 logo PNG.png" alt="The 1975 Logo">
+          </div>
+          <div id="backgroundImage"> 
+            <img src="1975 banner1.jpg" alt="The 1975 Banner">
+      </header>
+
+      <div class="flex-container">
+        <div class="flex-item-left">1</div>
+        <div class="flex-item-right">2</div>
+      </div>
+      
+    
+      </main>
+    </body>
+    <footer>
+        <nav id="bottomnav">
+          <a class="active" href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="tours.html">Tours</a>
+          <a href="merch.html">Merch</a>
+        </nav>
+        <nav id="external">
+          <a class="active" href="https://www.instagram.com/the1975/?hl=en" target="_blank">Instagram</a>
+          <a href="https://www.facebook.com/the1975/" target="_blank">Facebook</a>
+          <a href="https://open.spotify.com/artist/3mIj9lX2MWuHmhNCA7LSCW" target="_blank">Spotify</a>
+          <a href="https://music.apple.com/us/artist/the-1975/542640016" target="_blank">Apple Music</a>
+        </nav>
+        <div id="backgroundImage"> 
+            <img src="the-1975-part-of-the-band.jpg" alt="The 1975 Banner" id="footerimage">
+        </div>
+    </footer>
+</html>
