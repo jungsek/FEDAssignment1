@@ -3,9 +3,92 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    font-family: ;
     list-style: none;
     text-decoration: none;
   }
   
-  
+header {
+  position: fixed;
+  width: 100%;
+  top: 0%;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 10%;
+
+} 
+
+
+
+.topnavmenu {
+  display: flex;
+}
+
+.topnavmenu a {
+  color: white;
+  font-size: 16px;
+  text-transform: capitalize;
+  padding: 10px 20px;
+  font-weight: 400;
+  transition: all .42s ease;
+}
+
+.topnavmenu a:hover {
+  color: blue
+}
+
+.nav-icon {
+  display: flex;
+  align-items: center;
+}
+
+.nav-icon i {
+  position: relative;
+  color:white;
+  font-size: 25px;
+  font-weight: 400;
+  transition: all .42s ease;
+}
+
+.nav-icon i :hover {
+  transform: scale(1,1);
+  color: blue;
+}
+
+#menu-icon {
+  font-size: 35px;
+  color: white;
+  z-index: 10001;
+  cursor: pointer;
+}
+
+
+.top-picks {
+  background-color: #001689;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.top-picks{
+  margin: 70px 0;
+}
+
+.col {
+  flex-basis: 25%;
+  padding: 10px;
+  min-width: 200px;
+  margin-bottom: 50px;  
+  transition: transform 0.5s;
+}
+
+.col img {
+  width: 100%;
+  display: inline ;
+}
