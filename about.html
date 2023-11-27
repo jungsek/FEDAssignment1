@@ -3,70 +3,67 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The 1975 by Jung Sek</title>
-<link href="C:\Users\jungs\styles.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet"
-href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+<title>The 1975 By Jung Sek</title>
+<link href="styles.css" rel="stylesheet" type="text/css"> <!---Refer to self-made stylesheet--->
+<link rel="stylesheet" 
+href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"> 
+<!------Refer to external stylesheet to access open source web icons for nav bar---> 
 </head>
-
 <body>
+  <header>  <!---Header section--->
+    
+    
+    <!---Image of Logo--->
+        <div class="logoimg">
+          <img src="The 1975 logo PNG.png" alt="The 1975 Logo">
+        </div>
+    
+    
+    <!-----Navigation bar------->
+        <nav class="topnav">
+          <ul class="topnavmenu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="tours.html">Tours</a>    
+            <a href="merch.html">Merch</a>
+          </ul>
+        </nav>
+    <!-----Navigation bar icons------->
+        <div class="nav-icon">
+          <a href="#"><i class='bx bx-user'></i></a>
+          <a href="#"><i class='bx bx-cart'></i></a>
+          <div class='bx bx-menu' id="menu-icon"></div>
+        </div>  
+    <!----End of navigation bar----------->
+    
+      </header> <!-----End of header section------>
 
-  <div id="backgroundsong">
-    <audio controls autoplay>
-      <source src="The_1975_-_About_You.mp3" type="audio/ogg">
-      <source src="The_1975_-_About_You.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-    </audio>
-  </div>
-  
-  <main id="mainContent">
-    <header> 
-      <nav id="topnav">
-        <a class="active" href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="tours.html">Tours</a>
-        <a href="merch.html">Merch</a>
-      </nav>
-      <div id="1975logo">
-        <img src="The 1975 logo PNG.png" alt="The 1975 Logo">
+    <main id="main-content">
+      <!---About us text-->
+      <div class="about-us">
+        <h5>About Us</h5>
+        <p>The 1975 are an English pop rock band formed in Wilmslow in 2002. The band consists of Matty Healy (lead vocals, guitar, primary songwriter), Adam Hann (lead guitar), Ross MacDonald (bass), and George Daniel (drums, primary producer). The name of the band was inspired by a page of scribblings found in Healy's copy of On the Road by Jack Kerouac that was dated "1 June, The 1975". The band members met in secondary school and first performed together as teenagers in 2002, before professionally releasing music in 2012 under the independent label Dirty Hit. From 2012 to 2013, they opened for several major acts and released a series of extended plays—Facedown, Sex, Music for Cars, and IV—before releasing their UK chart-topping self-titled debut album (2013), which included the popular singles "Sex", "Chocolate", and "Robbers".</p>
       </div>
-      <div id="backgroundImage"> 
-        <img src="1975 banner1.jpg" alt="The 1975 Banner">
-    </header>
 
-    <div id="about-us">
-      <p>
-        The 1975 are an English pop rock band formed in 2002 in Wilmslow, Cheshire. The band consists of lead vocalist, principal songwriter and guitarist Matty Healy, lead guitarist Adam Hann, bassist Ross MacDonald, and drummer and primary producer George Daniel. The name of the band was inspired by a page of scribblings found in Healy's copy of On the Road by Jack Kerouac that was dated "1 June, The 1975".
-      </p>
-    </div>
-
-    <div id="members">
-      <img src="C:\Users\jungs\OneDrive\Desktop\JungSek FED ASSG 1\Website files\Images\The-1975.jpg" alt="The 1975 Members">
-      <ul>
-        <li>Ross Macdonald</li>
-        <li>Matty Healy</li>
-        <li>George Daniel</li>
-        <li>Adam Hann</li>
-      </ul>
-    </div>
-  
+      <div class="members">
+        <h6>Members</h6>
+            <div class="col2">
+                <img src="The-1975.jpg">
+                <button class="btn1"><span class="tooltiptext">Ross Macdonald</span></button>
+            </div>
+      </div>
+      
     </main>
-  </body>
+
   <footer>
-    <nav id="bottomnav">
-      <a class="active" href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="tours.html">Tours</a>
-      <a href="merch.html">Merch</a>
+    <nav id="botnav">
+        <ul class="botnavmenu">
+          <a class="active" href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="tours.html">Tours</a>    
+          <a href="merch.html">Merch</a>
+        </ul>
     </nav>
-    <nav id="external">
-      <a class="active" href="https://www.instagram.com/the1975/?hl=en" target="_blank">Instagram</a>
-      <a href="https://www.facebook.com/the1975/" target="_blank">Facebook</a>
-      <a href="https://open.spotify.com/artist/3mIj9lX2MWuHmhNCA7LSCW" target="_blank">Spotify</a>
-      <a href="https://music.apple.com/us/artist/the-1975/542640016" target="_blank">Apple Music</a>
-    </nav>
-    <div id="backgroundImage"> 
-      <img src="the-1975-part-of-the-band.jpg" alt="The 1975 Banner" id="footerimage">
-    </div>
   </footer>
+</body>
 </html>

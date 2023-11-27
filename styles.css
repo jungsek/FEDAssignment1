@@ -1,94 +1,479 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    list-style: none;
-    text-decoration: none;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  list-style: none;
+  text-decoration: none;
+}
+
+/*Header css styling*/
 header {
-  position: fixed;
-  width: 100%;
-  top: 0%;
-  right: 0;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 10%;
+position: fixed;
+width: 100%;
+top: 0%;
+right: 0;
+z-index: 1000;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 20px 10%;
+background-color: white;
+}  
 
-} 
 
-
-
-.topnavmenu {
-  display: flex;
+.topnav {
+display: flex;
+align-items: center;
 }
 
-.topnavmenu a {
-  color: white;
-  font-size: 16px;
-  text-transform: capitalize;
-  padding: 10px 20px;
-  font-weight: 400;
-  transition: all .42s ease;
+nav{
+flex:1;
+text-align: right;
 }
 
-.topnavmenu a:hover {
-  color: blue
+nav ul {
+display: inline-block;
+list-style-type: none;
 }
 
-.nav-icon {
-  display: flex;
-  align-items: center;
+nav ul li {
+display: inline-block;
+margin-right: 20px;
 }
+
+a {
+text-decoration: none;
+color: black;
+font-size: 16px;
+text-transform: capitalize;
+padding: 10px 20px;
+font-weight: 400;
+transition: all .42s ease;
+font-family: 'Poppins', sans-serif;
+}
+
+a:hover {
+color: blue
+}
+
 
 .nav-icon i {
-  position: relative;
-  color:white;
-  font-size: 25px;
-  font-weight: 400;
-  transition: all .42s ease;
+margin-right: 20px;
+color: black;
+font-size: 25px;
+font-weight: 400;
+transition: all .42s ease;
 }
 
-.nav-icon i :hover {
-  transform: scale(1,1);
-  color: blue;
+.nav-icon i:hover {
+transform: scale(1.1);
+color: blue;
 }
 
 #menu-icon {
-  font-size: 35px;
-  color: white;
-  z-index: 10001;
-  cursor: pointer;
+font-size: 35px;
+color: black;
+cursor: pointer;
+}
+/*End of header css styling*/
+
+
+/*-------- media query for menu --------*/
+@media only screen and (max-width: 800px) {
+nav ul {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  background: blue;
+  width: 100%;
+}
+nav ul li {
+  display: block;
+  margin-right: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 
+.cart-info p {
+  display: none;
+}
+}
+/*End of media query*/
+
+
+
+/*Footer CSS Styling*/
+footer {
+  background-image: url(https://npr.brightspotcdn.com/legacy/wp-content/uploads/2022/07/the1975.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 100px;
+  }  
+  
+  
+footer hr {
+  border: none;
+  background: #b5b5b5;
+  height: 1px;
+  margin: 20px 0;
+  }
+  
+.copyright {
+  color: white;
+  text-align: center;
+  }
+
+  .botnavmenu {
+margin-left: 300px;
+display: flex;
+}
+
+.botnavmenu a {
+color: white;
+font-size: 16px;
+text-transform: capitalize;
+padding: 10px 20px;
+font-weight: 400;
+transition: all .42s ease;
+font-family: 'Poppins', sans-serif;
+}
+.botnavmenu a:hover {
+color: blue
+}
+
+/*End of footer css styling*/
+  
+
+
+
+/*Index html styling*/
 .top-picks {
-  background-color: #001689;
+background-color: #001689;
 }
 
 .row {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: space-around;
+display: flex;
+align-items: center;
+flex-wrap: wrap;
+justify-content: space-around;
 }
 
 .top-picks{
-  margin: 70px 0;
+margin: 70px 0;
 }
 
 .col {
-  flex-basis: 25%;
-  padding: 10px;
-  min-width: 200px;
-  margin-bottom: 50px;  
-  transition: transform 0.5s;
+flex-basis: 25%;
+padding: 10px;
+min-width: 200px;
+margin-bottom: 50px;  
+transition: transform 0.5s;
 }
 
 .col img {
+width: 100%;
+display: inline ;
+}
+
+
+h1 {
+text-align: center;
+line-height: 60px;
+color: white;
+font-family: 'Poppins', sans-serif;
+}
+
+h3 {
+text-align: center;
+line-height: 60px;
+color: white;
+font-family: 'Poppins', sans-serif;
+}
+
+h4 {
+text-align: center;
+line-height: 60px;
+font-family: 'Poppins', sans-serif;
+}
+
+
+h2 {
+color: white;
+font-weight: normal;
+font-family: 'Poppins', sans-serif;
+}
+
+.col p {
+font-size:  14px;
+font-family: 'Poppins', sans-serif;
+}
+
+.col:hover{
+transform: translateY(-5px);
+}
+
+.youtubevideo{
+display: flex;
+align-items: center;
+flex-wrap: wrap;
+justify-content: space-around;
+background-color: gray;
+}
+
+
+.album {
+display: flex;
+align-items: center;
+flex-wrap: wrap;
+justify-content: space-around;
+padding: 50px 50px;
+}
+
+
+/*End of index.html styling*/
+
+
+
+
+/*About.html styling*/
+.about-us {
+background-color: #001689;
+padding: 200px 50px 50px 50px;
+}
+
+h5 {
+text-align: center;
+color: white;
+padding-bottom: 20px;
+font-family: 'Poppins', sans-serif;
+}
+
+.about-us p {
+text-align: center;
+color: white;
+font-family: 'Poppins', sans-serif;
+}
+
+.col2 {
+flex-basis: 100%;
+padding: 10px;
+min-width: 200px;
+margin-bottom: 50px;  
+transition: transform 0.5s;
+}
+
+.col2 img {
+width: 100%;
+display: inline ;
+}
+
+h6 {
+text-align: center;
+color: black;
+padding: 20px;
+font-family: 'Poppins', sans-serif;
+}
+
+.members {
+background-color: #e2e2e2;
+}
+
+.col2 .btn1 {
+position: absolute;
+top: 70%;
+left: 15%;
+background-color: rgba(0,0,0,0.1);
+padding: 100px 100px;
+border: none;
+}
+
+.col2 .btn1.tooltiptext {
+visibility: hidden;
+width: 120px;
+background-color: black;
+color: white;
+text-align: center;
+border-radius: 6px;
+padding: 5px 0;
+font-family: 'Poppins', sans-serif;
+
+position: absolute;
+z-index: 1;
+}
+
+.col2 .btn1:hover .tooltiptext {
+visibility: visible;
+}
+/*End of about.html styling*/
+
+
+
+/*-----MERCH PRODUCTS PAGE-----*/
+.row-2 {
+justify-content: space-between;
+margin: 100px auto 50px;
+}
+
+select {
+border: 1px solid blue;
+padding: 5px;
+}
+
+select:focus {
+outline: none;
+}
+
+
+
+
+/*Cart item details styling*/
+.cart-page {
+  margin: 80px auto;
+  padding-top: 100px;
+}
+
+table {
   width: 100%;
-  display: inline ;
+  border-collapse: collapse;
+}
+
+.cart-info {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+th {
+  text-align: left;
+  padding: 5px;
+  color: white;
+  background: blue ;
+  font-weight: normal;
+}
+
+td {
+  padding: 10px 5px;
+}
+
+td input {
+  width: 40px;
+  height: 30px;
+  padding: 5px; 
+}
+
+td a {
+  color: blue;
+  font-size: 12px;
+}
+
+td img {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+}
+
+.total-price {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.total-price table {
+  border-top: 3px solid blue;
+  width: 100%;
+  max-width: 400px;
+}
+
+td:last-child {
+  text-align: right;
+}
+
+th:last-child {
+  text-align: right;
+}
+
+/*Endd of Cart item details styling*/
+
+
+
+/*Login page styling*/
+.account-page {
+  padding: 200px 50px 0 0;
+  background-image: url(https://images.theskinny.co.uk/assets/production/000/144/993/144993_widescreen.1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.form-container {
+  background: white;
+  width: 300px;
+  height: 400px;
+  position: relative;
+  padding: 20px 0;
+  margin: auto;
+  box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.form-container span {
+  font-weight: bold;
+  padding: 0 10px;
+  color: #555;
+  cursor: pointer;
+  width: 100px;
+  display: inline-block;
+}
+
+.form-btn {
+  display: inline-block;
+}
+
+.form-container form {
+    max-width: 300px;
+    padding: 0 20px;
+    position: absolute;
+    top: 130px;
+    transition: transform 1s;
+
+}
+
+form input {
+  width: 100%;
+  height: 30px;
+  margin: 10px 0;
+  padding: 0 10px;
+  border: 1px solid #ccc
+}
+
+form .btn {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+ margin: 10px 0; 
+}
+
+form .btn:focus {
+  outline: none;
+}
+
+#LoginFrom {
+  left: -300px;
+}
+
+#RegForm {
+  left: 0;
+}
+
+form a {
+  font-size: 12px;
+}
+
+#Indicator{
+  width: 100px;
+  border: none;
+  background: blue;
+  height: 3px;
+  margin-top: 8px;
+  transform: translateX(100px);
+  transition: transform 1s;
 }

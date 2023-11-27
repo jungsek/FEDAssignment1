@@ -3,92 +3,138 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The 1975 by Jung Sek</title>
-<link href="C:\Users\jungs\styles.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet"
-href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-
+<title>The 1975 By Jung Sek</title>
+<link href="styles.css" rel="stylesheet" type="text/css"> <!---Refer to self-made stylesheet--->
+<link rel="stylesheet" 
+href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"> 
 <style>
-    * {
-  box-sizing: border-box;
-}
-
-.flex-container {
-  display: flex;
-  flex-direction: row;
-  font-size: 30px;
-  text-align: center;
-}
-
-.flex-item-left {
-  background-color: #f1f1f1;
-  padding: 10px;
-  flex: 50%;
-}
-
-.flex-item-right {
-  background-color: dodgerblue;
-  padding: 10px;
-  flex: 50%;
-}
-
-/* Responsive layout - makes a one column-layout instead of two-column layout */
-@media (max-width: 800px) {
-  .flex-container {
-    flex-direction: column;
-  }
-}
+    .col img {
+        background-color: white;
+    }
 </style>
+<!------Refer to external stylesheet to access open source web icons for nav bar---> 
 </head>
-
 <body>
+    <header>
 
-    <div id="backgroundsong">
-      <audio controls autoplay>
-        <source src="The_1975_-_About_You.mp3" type="audio/ogg">
-        <source src="The_1975_-_About_You.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-      </audio>
-    </div>
-    
-    <main id="mainContent">
-      <header> 
-        <nav id="topnav">
-          <a class="active" href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="tours.html">Tours</a>
-          <a href="merch.html">Merch</a>
-        </nav>
-        <div id="1975logo">
-            <img src="The 1975 logo PNG.png" alt="The 1975 Logo">
-          </div>
-          <div id="backgroundImage"> 
-            <img src="1975 banner1.jpg" alt="The 1975 Banner">
-      </header>
-
-      <div class="flex-container">
-        <div class="flex-item-left">1</div>
-        <div class="flex-item-right">2</div>
+      <div id="logoimg">
+        <img src="The 1975 logo PNG.png" alt="The 1975 Logo">
       </div>
-      
-    
-      </main>
-    </body>
+
+      <nav id="topnav">
+          <ul class="topnavmenu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="tours.html">Tours</a>    
+            <a href="merch.html">Merch</a>
+          </ul>
+      </nav>
+
+      <div class="nav-icon">
+        <a href="#"><i class='bx bx-user'></i></a>
+        <a href="#"><i class='bx bx-cart'></i></a>
+        <div class='bx bx-menu' id="menu-icon"></div>
+      </div>
+
+    </header>
+
+    <main id="main-content">
+    <!----Featured products---->
+    <div class="top-picks">
+        <div class="row-2">
+            <h1>All Products</h1>
+            <select>
+                <option>Default Sorting</option>
+                <option>Sort by price</option>
+                <option>Sort by title</option>
+            </select>
+        </div>
+      <h2 class="title">Featured products</h2>
+      <div class="row">
+        <div class="col">
+          <img src="1.webp">
+          <h1>Notes > Self Titled T-Shirt</h1>
+          <p>$35.00</p>
+        </div>
+        <div class="col">
+          <img src="2.webp">
+          <h1>CAB Longsleeve</h1>
+          <p>$45.00</p>
+        </div>
+        <div class="col">
+          <img src="3.webp">
+          <h1>Press Shot T-Shirt</h1>
+          <p>$35.00</p>
+        </div>
+        <div class="col">
+            <img src="4.webp">
+            <h1>Logo Muscle Tank</h1>
+            <p>$40.00</p>
+          </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <img src="5.webp">
+          <h1>The 1975 10 YR T-Shirt</h1>
+          <p>$35.00</p>
+        </div>
+        <div class="col">
+          <img src="6.webp">
+          <h1>The 1975 10 YR Hoodie</h1>
+          <p>$85.00</p>
+        </div>
+        <div class="col">
+          <img src="7.webp">
+          <h1>Original Logo T Shirt</h1>
+          <p>$35.00</p>
+        </div>
+        <div class="col">
+            <img src="8.webp">
+            <h1>Music For Cars T Shirt</h1>
+            <p>$35.00</p>
+          </div>
+        <div class="row">
+            <div class="col">
+              <img src="9.webp">
+              <h1>Sex T shirt</h1>
+              <p>$35.00</p>
+            </div>
+            <div class="col">
+              <img src="10.webp">
+              <h1>Settle Down T-Shirt</h1>
+              <p>$35.00</p>
+            </div>
+            <div class="col">
+              <img src="11.webp">
+              <h1>Medicine T-Shirt</h1>
+              <p>$35.00</p>
+        </div>
+        <div class="col">
+            <img src="12.webp">
+            <h1>Facedown T-Shirt</h1>
+            <p>$35.00</p>
+          </div>
+    </div>
+
+
+
     <footer>
-        <nav id="bottomnav">
+      <nav class="botnavmenu">
+        <ul>
           <a class="active" href="index.html">Home</a>
           <a href="about.html">About</a>
           <a href="tours.html">Tours</a>
           <a href="merch.html">Merch</a>
-        </nav>
-        <nav id="external">
-          <a class="active" href="https://www.instagram.com/the1975/?hl=en" target="_blank">Instagram</a>
-          <a href="https://www.facebook.com/the1975/" target="_blank">Facebook</a>
-          <a href="https://open.spotify.com/artist/3mIj9lX2MWuHmhNCA7LSCW" target="_blank">Spotify</a>
-          <a href="https://music.apple.com/us/artist/the-1975/542640016" target="_blank">Apple Music</a>
-        </nav>
-        <div id="backgroundImage"> 
-            <img src="the-1975-part-of-the-band.jpg" alt="The 1975 Banner" id="footerimage">
-        </div>
+        </ul>
+      </nav>
+      <nav class="external">
+        <a class="active" href="https://www.instagram.com/the1975/?hl=en" target="_blank">Instagram</a>
+        <a href="https://www.facebook.com/the1975/" target="_blank">Facebook</a>
+        <a href="https://open.spotify.com/artist/3mIj9lX2MWuHmhNCA7LSCW" target="_blank">Spotify</a>
+        <a href="https://music.apple.com/us/artist/the-1975/542640016" target="_blank">Apple Music</a>
+      </nav>
     </footer>
+
+    
+</body>
 </html>

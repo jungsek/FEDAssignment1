@@ -8,77 +8,79 @@
 <link rel="stylesheet" 
 href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"> 
 <!------Refer to external stylesheet to access open source web icons for nav bar---> 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<!-------Refer to google fonts for custom font-------------->
 </head>
 
 
 <body>
-  <header>  <!---Header section--->
-
-
-<!------Play background audio------>
-  <div id="backgroundsong">
-    <audio controls autoplay> <!----Shows audio player controller & autoplays the song in background--->>
-        <source src="The_1975_-_About_You.mp3" type="audio/ogg"> 
-      <source src="The_1975_-_About_You.mp3" type="audio/mpeg">
+  <main class="container">  <!----Main container---->
+    <header>               <!---Header section--->
+      <!------Play background audio------>
+    <div class="backgroundsong">
+    <audio autoplay> <!----Shows audio player controller & autoplays the song in background--->
+    <source src="The_1975_-_About_You.mp3" type="audio/ogg"> 
+    <source src="The_1975_-_About_You.mp3" type="audio/mpeg">
     Your browser does not support the audio element. <!----Display if browser does not support----->
     </audio>
-  </div>
+    </div>
 <!------End of background audio player------>
 
-
-<!---Image of Logo--->
-    <div id="logoimg">
-      <img src="The 1975 logo PNG.png" alt="The 1975 Logo">
-    </div>
-
-
 <!-----Navigation bar------->
-    <nav id="topnav">
-      <ul class="topnavmenu">
-        <a class="active" href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="tours.html">Tours</a>    
-        <a href="merch.html">Merch</a>
-      </ul>
-    </nav>
-<!-----Navigation bar icons------->
-    <div class="nav-icon">
-      <a href="#"><i class='bx bx-user'></i></a>
-      <a href="#"><i class='bx bx-cart'></i></a>
-      <div class='bx bx-menu' id="menu-icon"></div>
-    </div>  
-<!----End of navigation bar----------->
+    <div class="navbar">   
+      <!---Image of Logo--->
+      <div class="logo">
+        <img src="C:\Users\jungs\OneDrive\Desktop\JungSek FED ASSG 1\Website files\FEDAssignment1\The 1975 logo PNG.png" width="125px">
+      </div>
+      <!-----Navigation bar------->
+      <nav>
+        <ul id="MenuItems">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Tours</a></li>
+          <li><a href="#">Merch</a></li>
+        </ul>
+      </nav>
+      <!-----Navigation bar icons------->
+      <div class="nav-icon">
+        <a href="loginpage.html"><i class='bx bx-user'></i></a>
+        <a href="cart.html"><i class='bx bx-cart'></i></a>
+      </div>
+      <div class='bx bx-menu' id="menu-icon" onclick="menutoggle()"></div>
+       <!-----Perform javascript function when when user clicks on icon------>
+    </div>
+    <!----End of navigation bar----------->
+    </header> <!-----End of header section------>
 
-  </header> <!-----End of header section------>
 
-
-  <main id="mainContent"> <!----Main container---->
 
   <!-----Top picks for you section------->
   <div class="top-picks">
-    <h2 class="title">Top Picks For You</h2> <!-----Title of the section------>
+    <h1 class="title">Top Picks For You</h1> <!-----Title of the section------>
     <div class="row"> <!-----Define a single row of items------->
       <div class="col"> <!----Define each column within the row------>
-        <img src="">
-        <h1>When we are together (2022)</h1>
+        <img src="vinyl1.png">
+        <h2>When we are together (2022)</h2>
         <p>The 1975 - Being Funny In A Foreign Language</p>
         <p>23,621,716 plays</p>
       </div>
       <div class="col">
-        <img src="C:\Users\jungs\OneDrive\Desktop\JungSek FED ASSG 1\Website files\Images\vinyl3.png">
-        <h1>Robbers (2013)</h1>
+        <img src="vinyl3.png">
+        <h2>Robbers (2013)</h2>
         <p>The 1975 - The 1975</p>
         <p>343,992,633 plays</p>
       </div>
       <div class="col">
-        <img src="C:\Users\jungs\OneDrive\Desktop\JungSek FED ASSG 1\Website files\Images\vinyl2.png">
-        <h1>Somebody Else (2016)</h1>
+        <img src="vinyl2.png">
+        <h2>Somebody Else (2016)</h2>
         <p>The 1975 - I Like It When You Sleep, For You Are So Beautif...</p>
         <p>725,272,845 plays</p>
       </div>
       <div class="col">
-        <img src="C:\Users\jungs\OneDrive\Desktop\JungSek FED ASSG 1\Website files\FEDAssignment1\vinyl4.png">
-        <h1>If You're Too Shy (Let Me Know) (2020)</h1>
+        <img src="vinyl4.png">
+        <h2>If You're Too Shy (Let Me Know) (2020)</h2>
         <p>The 1975 - Notes On A Conditional...</p>
         <p>80,320,098 plays</p>
       </div>
@@ -87,7 +89,7 @@ href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
   <!------End of top picks for you section------->
 
   <!---Newest youtube video-->
-  <div id="newest-video">
+  <div class="youtubevideo">
     <h3 class="title">Our newest YouTube video</h3>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/epjQAHfTXfo?si=3Fo_xuSfrG5DSOtO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
   </div>
@@ -95,7 +97,7 @@ href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 
 
   <!---Newest album-->
-  <div id="newest-album">
+  <div class="album">
     <h4 class="title">Our Newest album</h4>
     <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/6dVCpQ7oGJD1oYs2fv1t5M?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
   </div>
@@ -105,7 +107,7 @@ href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 </body>
 
 <footer>
-  <nav id="bottomnav">
+  <nav class="botnavmenu">
     <ul>
       <a class="active" href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -113,15 +115,14 @@ href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
       <a href="merch.html">Merch</a>
     </ul>
   </nav>
-  <nav id="external">
+  <nav class="external">
     <a class="active" href="https://www.instagram.com/the1975/?hl=en" target="_blank">Instagram</a>
     <a href="https://www.facebook.com/the1975/" target="_blank">Facebook</a>
     <a href="https://open.spotify.com/artist/3mIj9lX2MWuHmhNCA7LSCW" target="_blank">Spotify</a>
     <a href="https://music.apple.com/us/artist/the-1975/542640016" target="_blank">Apple Music</a>
   </nav>
-  <div id="backgroundImage"> 
-    <img src="the-1975-part-of-the-band.jpg" alt="The 1975 Banner" id="footerimage">
-  </div>
 </footer>
 
 </html>
+
+
