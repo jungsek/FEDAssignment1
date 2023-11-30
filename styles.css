@@ -452,10 +452,261 @@ h4 {
 
 }
 
-
-
-
 /*--------End of about page styling---------*/
+
+
+
+/*--------Merch page styling---------*/
+
+.merch {
+  padding-top: 50px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+
+.row-2 {
+  justify-content: space-between;
+  margin: 100px auto 50px;
+}
+
+select {
+  border: 1px solid #001689;
+  padding: 5px;
+}
+
+select:focus{
+  outline: none;
+}
+
+.merch h2 {
+  color: #001689;
+}
+.merch p {
+  color: #555;
+}
+
+.page-btn {
+  margin: 0 auto 80px;
+}
+
+.page-btn span {
+  display: inline-block;
+  border: 1px solid #001689;
+  margin-left: 10px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+}
+
+.page-btn span:hover {
+  background: #001689;
+  color: white;
+}
+
+@media only screen and (max-width: 800px) {
+  .merch {
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+
+/*--------End of merch page styling---------*/
+
+
+
+
+/*-------Product details styling---------*/
+.single-product {
+  margin-top: 80px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.single-product .btn {
+  display: inline-block;
+  background: #001689;
+  color: white;
+  padding: 8px 30px;
+  margin: 30px 0;
+  border-radius: 30px;
+}
+
+.single-product .col-2 img {
+  padding: 0;
+}
+
+.single-product.col-2 {
+  padding: 20px;
+}
+
+.single-product h2 {
+  color: #333;
+}
+
+.single-product p {
+  color: #333;
+}
+
+.single-product h4 {
+  margin: 20px 0;
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+}
+
+.single-product select {
+  display: block;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.single-product input {
+  width: 50px;
+  height: 40px;
+  padding-left: 10px;
+  font-size: 20px;
+  margin-right: 10px;
+  border: 1px solid #001689;
+}
+
+input:focus {
+  outline: none;
+}
+
+.single-product .bx {
+  margin-left: 10px;
+}
+
+.small-img-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.small-img-col {
+  flex-basis: 24%;
+  cursor: pointer;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+.single-product .row {
+  text-align: left;
+}
+
+.single-product .col2 {
+  padding: 20px 0;
+}
+
+.single-product h1 {
+  font-size: 26px;
+  line-height: 32px;
+}
+
+.single-product {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+}
+
+/*--------End of product details styling---------*/
+
+
+
+
+/*--------Cart page styling---------*/
+.cart-page {
+  margin: 80px auto;
+  padding-top: 100px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cart-info {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+th {
+  text-align: left;
+  padding: 5px;
+  color:white;
+  background: #001689;
+  font-weight: normal;
+}
+
+td {
+  padding: 10px 5px;
+}
+
+td input {
+  width: 40px;
+  height: 30px;
+  padding: 5px;
+}
+
+td a {
+  color: #001689;
+  font-size: 12px;
+}
+
+td img {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+}
+
+.total-price {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.total-price table {
+  border-top: 3px solid #001689;
+  width: 100%;
+  max-width: 400px;
+}
+
+/*Targets last child of the element*/
+td:last-child {          /*Make price appear on right hand side*/
+  text-align: right;
+}
+
+th:last-child {         /*Make price appear on right hand side*/
+  text-align: right;
+}
+
+@media only screen and (max-width: 600px) {       /*Make item Name disappear on small screen*/
+.cart-info p {
+  display: none;
+}
+.cart-page {
+  padding-top: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+}
+
+/*--------End of cart page styling---------*/
+
+
+
+
+
+
+
+
 
 /*-----------------------End of main content styling------------------------*/
 

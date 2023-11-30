@@ -1,139 +1,179 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The 1975 By Jung Sek</title>
-<link href="styles.css" rel="stylesheet" type="text/css"> <!---Refer to self-made stylesheet--->
-<link rel="stylesheet" 
-href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"> 
-<style>
-    .col img {
-        background-color: white;
-    }
-</style>
-<!------Refer to external stylesheet to access open source web icons for nav bar---> 
-</head>
-<body>
-    <header>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The 1975</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" 
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"> 
 
-      <div id="logoimg">
-        <img src="The 1975 logo PNG.png" alt="The 1975 Logo">
+  </head>
+
+
+  <body>
+  <div class="container">  <!----Main container---->
+    <header>               <!---Header section--->
+
+<!-----Navigation bar------->
+    <div class="navbar">   
+      <!---Image of Logo--->
+      <div class="logo">
+        <img src="images/The 1975 logo.png" width="125px">
       </div>
-
-      <nav id="topnav">
-          <ul class="topnavmenu">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="tours.html">Tours</a>    
-            <a href="merch.html">Merch</a>
-          </ul>
+      <!-----Navigation bar------->
+      <nav>
+        <ul id="MenuItems">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="tours.html">Tours</a></li>
+          <li><a href="merch.html">Merch</a></li>
+        </ul>
       </nav>
-
+            <!------Play background audio------>
+            <div class="backgroundsong">
+              <audio controls controlsList="noplaybackrate" id="audio"> <!----Shows audio player controller & plays the song in background--->
+              <source src="The_1975_-_About_You.mp3" type="audio/mpeg">
+              Your browser does not support the audio element. <!----Display if browser does not support----->
+              </audio>
+              </div>
+  <!------End of background audio player------>
+      <!-----Navigation bar icons------->
       <div class="nav-icon">
-        <a href="#"><i class='bx bx-user'></i></a>
-        <a href="#"><i class='bx bx-cart'></i></a>
-        <div class='bx bx-menu' id="menu-icon"></div>
+        <a href="loginpage.html"><i class='bx bx-user'></i></a>
+        <a href="cart.html"><i class='bx bx-cart'></i></a>
       </div>
+      <div class='bx bx-menu' id="menu-icon" onclick="menutoggle()"></div> <!-----Use javascript function------>
+    </div>
+    <!----End of navigation bar----------->
+    </header> <!-----End of header section------>
 
-    </header>
+  </div> <!------End of container-------->
+
+  <div class="small-container cart-page">
+    <table>
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+        </tr>
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img src="images/1.webp">
+                    <div>
+                        <p>Notes > Self Titled T-Shirt</p>
+                        <small>Price: $35.00</small>
+                        <br>
+                        <a href="">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" value="1"></td>
+            <td>$35.00</td>
+        </tr>
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img src="images/6.webp">
+                    <div>
+                        <p>The 1975 10 YR Hoodie</p>
+                        <small>Price: $85.00</small>
+                        <br>
+                        <a href="">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" value="1"></td>
+            <td>$85.00</td>
+        </tr>
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img src="images/10.webp">
+                    <div>
+                        <p>Settle Down T-Shirt</p>
+                        <small>Price: $35.00</small>
+                        <br>
+                        <a href="">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" value="1"></td>
+            <td>$35.00</td>
+        </tr>
+    </table>
 
 
-<!------Cart item details----->
-    <main class="main-content cart-page">
+    <div class="total-price">
         <table>
             <tr>
-                <th>Product</th>
-                <th>Quantity</th>
-                <th>Subtotal</th>
+                <td>Subtotal</td>
+                <td>$155.00</td>
             </tr>
             <tr>
-                <td>
-                    <div class="cart-info">
-                        <img src="1.webp">
-                        <div>
-                            <p>Notes > Self Titled T-Shirt</p>
-                            <small>Price: $35.00</small>
-                            <br>
-                            <a href="">Remove</a>
-                        </div>
-                    </div>
-                </td>
-                <td><input type="number" value="1"></td>
-                <td>$35.00</td>
+                <td>GST</td>
+                <td>$10.85</td>
             </tr>
             <tr>
-                <td>
-                    <div class="cart-info">
-                        <img src="3.webp">
-                        <div>
-                            <p>Press Shot T-Shirt</p>
-                            <small>Price: $35.00</small>
-                            <br>
-                            <a href="">Remove</a>
-                        </div>
-                    </div>
-                </td>
-                <td><input type="number" value="1"></td>
-                <td>$35.00</td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="cart-info">
-                        <img src="6.webp">
-                        <div>
-                            <p>The 1975 10 YR Hoodie</p>
-                            <small>Price: $85.00</small>
-                            <br>
-                            <a href="">Remove</a>
-                        </div>
-                    </div>
-                </td>
-                <td><input type="number" value="1"></td>
-                <td>$85.00</td>
+                <td>Total</td>
+                <td>$165.85</td>
             </tr>
         </table>
 
-        <div class="total-price">
-            <table>
-                <tr>
-                    <td>Subtotal</td>
-                    <td>$155.00</td>
-                </tr>
-                <tr>
-                    <td>Tax</td>
-                    <td>$35.00</td>
-                </tr>
-                <tr>
-                    <td>Total</td>
-                    <td>$190.00</td>
-                </tr>
-            </table>
+    </div>
 
+  </div>
+
+ 
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="footer-col-1">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="tours.html">Tours</a></li>
+              <li><a href="merch.html">Merch</a></li>
+            </ul>
         </div>
+        <div class="footer-col-2">
+            <ul>
+              <li><a href="https://www.instagram.com/the1975/?hl=en" target="_blank">Instagram</a></li>
+              <li><a href="https://www.facebook.com/the1975/" target="_blank">Facebook</a></li>
+              <li><a href="https://open.spotify.com/artist/3mIj9lX2MWuHmhNCA7LSCW" target="_blank">Spotify</a></li>
+              <li><a href="https://music.apple.com/us/artist/the-1975/542640016" target="_blank">Apple Music</a></li>
+            </ul>
+        </div>
+      </div>
+    <hr>
+    <p class="Copyright">Copyright 2023 - The 1975</p>
+    </div>
+  </footer>
 
-    
-    </main >
-<!------End of cart item details-------->
+  <script>
+    var MenuItems = document.getElementById("MenuItems");
+    MenuItems.style.maxHeight = "0px";
+    function menutoggle() {
+        if(MenuItems.style.maxHeight == "0px")
+        {
+            MenuItems.style.maxHeight = "200px";
+        }
+        else 
+        {
+            MenuItems.style.maxHeight = "0px";
+        }
+    }
 
 
-    <footer>
-      <nav class="botnavmenu">
-        <ul>
-          <a class="active" href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="tours.html">Tours</a>
-          <a href="merch.html">Merch</a>
-        </ul>
-      </nav>
-      <nav class="external">
-        <a class="active" href="https://www.instagram.com/the1975/?hl=en" target="_blank">Instagram</a>
-        <a href="https://www.facebook.com/the1975/" target="_blank">Facebook</a>
-        <a href="https://open.spotify.com/artist/3mIj9lX2MWuHmhNCA7LSCW" target="_blank">Spotify</a>
-        <a href="https://music.apple.com/us/artist/the-1975/542640016" target="_blank">Apple Music</a>
-      </nav>
-    </footer>
 
-    
-</body>
+  </script>
+
+
+
+
+  </body>
 </html>

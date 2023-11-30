@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The 1975</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" 
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"> 
+
+  </head>
+
+
+  <body>
+  <div class="container">  <!----Main container---->
+    <header>               <!---Header section--->
+
+<!-----Navigation bar------->
+    <div class="navbar">   
+      <!---Image of Logo--->
+      <div class="logo">
+        <img src="images/The 1975 logo.png" width="125px">
+      </div>
+      <!-----Navigation bar------->
+      <nav>
+        <ul id="MenuItems">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="tours.html">Tours</a></li>
+          <li><a href="merch.html">Merch</a></li>
+        </ul>
+      </nav>
+            <!------Play background audio------>
+            <div class="backgroundsong">
+              <audio controls controlsList="noplaybackrate" id="audio"> <!----Shows audio player controller &plays the song in background--->
+              <source src="The_1975_-_About_You.mp3" type="audio/mpeg">
+              Your browser does not support the audio element. <!----Display if browser does not support----->
+              </audio>
+              </div>
+  <!------End of background audio player------>
+      <!-----Navigation bar icons------->
+      <div class="nav-icon">
+        <a href="loginpage.html"><i class='bx bx-user'></i></a>
+        <a href="cart.html"><i class='bx bx-cart'></i></a>
+      </div>
+      <div class='bx bx-menu' id="menu-icon" onclick="menutoggle()"></div> <!-----Use javascript function------>
+    </div>
+    <!----End of navigation bar----------->
+    </header> <!-----End of header section------>
+
+  </div> <!------End of container-------->
+
+  <div class="small-container single-product">
+    <div class="row">
+      <div class="col-2">
+        <img src="images/1.1.png" width="100%" id="productImg">
+
+        <div class="small-img-row">
+            <div class="small-img-col">
+                <img src="images/1.1.png" class="small-img">
+            </div>
+            <div class="small-img-col">
+                <img src="images/1.3.png" class="small-img">
+            </div>
+            <div class="small-img-col">
+                <img src="images/1.4.png" class="small-img">
+            </div>
+            <div class="small-img-col">
+                <img src="images/1.6.png" class="small-img">
+            </div>
+        </div>
+
+      </div>
+      <div class="col-2">
+        <p>Home / T-Shirt</p>
+        <h1>Notes > Self Titled T-Shirt</h1>
+        <h4>$35.00</h4>
+        <select>
+            <option>Select Size</option>
+            <option>XXL</option>
+            <option>XL</option>
+            <option>Large</option>
+            <option>Medium</option>
+            <option>Small</option>
+        </select>
+        <input type="number" value="1">
+        <a href="cart.html" class="btn" id="addtocart">Add To Cart</a>
+        <h3>Product Details <i class='bx bx-right-indent' style='color:#001689' ></i></h3>
+        <br>
+        <p>Screenprinted front graphics. 100% Cotton, extra comfort.</p>
+      </div>
+    </div>
+
+  
+
+
+  <div class="small-container">
+    <div class="row row-2">
+        <h2>Related products</h2>
+        <a href="merch.html">View More...</a>
+    </div>
+  </div>
+
+
+    <div class="categories">
+      <div class="product-details">
+      <div class="small-container">
+
+
+
+ 
+
+          <div class="row">
+            <div class="col-4">
+              <img src="images/9.webp">
+              <h2>Notes > Self Titled T-Shirt</h2>
+              <div class="rating">
+                  <i class='bx bxs-star' style='color:#001689' ></i>
+                  <i class='bx bxs-star' style='color:#001689' ></i>
+                  <i class='bx bxs-star' style='color:#001689' ></i>
+                  <i class='bx bxs-star' style='color:#001689' ></i>
+                  <i class='bx bx-star' style='color:#001689' ></i>
+              </div>
+              <p>$35.00</p>
+            </div>
+  
+            <div class="col-4">
+              <img src="images/10.webp">
+              <h2>CAB Longsleeve</h2>
+              <div class="rating">
+                  <i class='bx bxs-star' style='color:#001689' ></i>
+                  <i class='bx bxs-star' style='color:#001689' ></i>
+                  <i class='bx bxs-star' style='color:#001689' ></i>
+                  <i class='bx bxs-star' style='color:#001689' ></i>
+                  <i class='bx bxs-star-half' style='color:#001689' ></i>
+              </div>
+              <p>$45.00</p>
+            </div>
+  
+            <div class="col-4">
+              <img src="images/11.webp">
+              <h2>Press Shot T-Shirt</h2>
+              <div class="rating">
+                  <i class='bx bxs-star' style='color:#001689' ></i>
+                  <i class='bx bxs-star' style='color:#001689' ></i>
+                  <i class='bx bxs-star' style='color:#001689' ></i>
+                  <i class='bx bxs-star' style='color:#001689' ></i>
+                  <i class='bx bx-star' style='color:#001689' ></i>
+              </div>
+              <p>$35.00</p>
+            </div>
+  
+            <div class="col-4">
+              <img src="images/12.webp">
+              <h2>Logo Muscle Tank</h2>
+              <div class="rating">
+                  <i class='bx bxs-star' style='color:#001689' ></i>
+                  <i class='bx bxs-star' style='color:#001689' ></i>
+                  <i class='bx bxs-star' style='color:#001689' ></i>
+                  <i class='bx bxs-star' style='color:#001689' ></i>
+                  <i class='bx bxs-star-half' style='color:#001689' ></i>
+              </div>
+              <p>$40.00</p>
+            </div>
+  
+          </div>
+
+
+      </div>
+      </div>
+
+
+
+    </div>
+  </div>
+
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="footer-col-1">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="tours.html">Tours</a></li>
+              <li><a href="merch.html">Merch</a></li>
+            </ul>
+        </div>
+        <div class="footer-col-2">
+            <ul>
+              <li><a href="https://www.instagram.com/the1975/?hl=en" target="_blank">Instagram</a></li>
+              <li><a href="https://www.facebook.com/the1975/" target="_blank">Facebook</a></li>
+              <li><a href="https://open.spotify.com/artist/3mIj9lX2MWuHmhNCA7LSCW" target="_blank">Spotify</a></li>
+              <li><a href="https://music.apple.com/us/artist/the-1975/542640016" target="_blank">Apple Music</a></li>
+            </ul>
+        </div>
+      </div>
+    <hr>
+    <p class="Copyright">Copyright 2023 - The 1975</p>
+    </div>
+  </footer>
+
+  <script>
+    var MenuItems = document.getElementById("MenuItems");
+    MenuItems.style.maxHeight = "0px";
+    function menutoggle() {
+        if(MenuItems.style.maxHeight == "0px")
+        {
+            MenuItems.style.maxHeight = "200px";
+        }
+        else 
+        {
+            MenuItems.style.maxHeight = "0px";
+        }
+    }
+
+
+
+    var ProductImg = document.getElementById("productImg");
+    var SmallImg = document.getElementsByClassName("small-img");
+
+    SmallImg[0].onclick = function(){
+        ProductImg.src = SmallImg[0].src;
+    }
+
+    SmallImg[1].onclick = function(){
+        ProductImg.src = SmallImg[1].src;
+    }
+
+    SmallImg[2].onclick = function(){
+        ProductImg.src = SmallImg[2].src;
+    }
+
+    SmallImg[3].onclick = function(){
+        ProductImg.src = SmallImg[3].src;
+    }
+
+
+ 
+
+
+
+  </script>
+
+
+
+
+  </body>
+</html>
