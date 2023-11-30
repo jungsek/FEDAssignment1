@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The 1975</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" 
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"> 
+
+  </head>
+
+
+  <body>
+  <div class="container">  <!----Main container---->
+    <header>               <!---Header section--->
+
+<!-----Navigation bar------->
+    <div class="navbar">   
+      <!---Image of Logo--->
+      <div class="logo">
+        <img src="images/The 1975 logo.png" width="125px">
+      </div>
+      <!-----Navigation bar------->
+      <nav>
+        <ul id="MenuItems">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="tours.html">Tours</a></li>
+          <li><a href="merch.html">Merch</a></li>
+        </ul>
+      </nav>
+            <!------Play background audio------>
+            <div class="backgroundsong">
+              <audio controls controlsList="noplaybackrate" id="audio"> <!----Shows audio player controller & plays the song in background--->
+              <source src="The_1975_-_About_You.mp3" type="audio/mpeg">
+              Your browser does not support the audio element. <!----Display if browser does not support----->
+              </audio>
+              </div>
+  <!------End of background audio player------>
+      <!-----Navigation bar icons------->
+      <div class="nav-icon">
+        <a href="loginpage.html"><i class='bx bx-user'></i></a>
+        <a href="cart.html"><i class='bx bx-cart'></i></a>
+      </div>
+      <div class='bx bx-menu' id="menu-icon" onclick="menutoggle()"></div> <!-----Use javascript function------>
+    </div>
+    <!----End of navigation bar----------->
+    </header> <!-----End of header section------>
+
+  </div> <!------End of container-------->
+  
+
+ <!--------------Start of login page-------------->
+  <div class="account-page">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="form-container">
+                    <div class="form-btn">
+                        <span onclick="login()">Login</span>
+                        <span onclick="register()">Register</span>
+                        <hr id="indicator">
+                    </div>
+
+                    <form id="loginform">
+                        <input type="text" placeholder="Username">
+                        <input type="password" placeholder="Password">
+                        <button type="submit" class="btn">Login</button>
+                        <a href="">Forgot Password</a>
+                    </form>
+
+                    <form id="regform">
+                        <input type="text" placeholder="Username">
+                        <input type="email" placeholder="Email">
+                        <input type="password" placeholder="Password">
+                        <button type="submit" class="btn">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <!--------------End of login page-------------->
+
+
+
+ <!--------------Start of footer-------------->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="footer-col-1">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="tours.html">Tours</a></li>
+              <li><a href="merch.html">Merch</a></li>
+            </ul>
+        </div>
+        <div class="footer-col-2">
+            <ul>
+              <li><a href="https://www.instagram.com/the1975/?hl=en" target="_blank">Instagram</a></li>
+              <li><a href="https://www.facebook.com/the1975/" target="_blank">Facebook</a></li>
+              <li><a href="https://open.spotify.com/artist/3mIj9lX2MWuHmhNCA7LSCW" target="_blank">Spotify</a></li>
+              <li><a href="https://music.apple.com/us/artist/the-1975/542640016" target="_blank">Apple Music</a></li>
+            </ul>
+        </div>
+      </div>
+    <hr>
+    <p class="Copyright">Copyright 2023 - The 1975</p>
+    </div>
+  </footer>
+
+  <script>
+    var MenuItems = document.getElementById("MenuItems");
+    MenuItems.style.maxHeight = "0px";
+    function menutoggle() {
+        if(MenuItems.style.maxHeight == "0px")
+        {
+            MenuItems.style.maxHeight = "200px";
+        }
+        else 
+        {
+            MenuItems.style.maxHeight = "0px";
+        }
+    }
+
+    var LoginForm = document.getElementById("loginform");
+    var RegForm =document.getElementById("regform");
+    var Indicator = document.getElementById("indicator");
+
+    function register() {
+        RegForm.style.transform = "translateX(0px)";
+        LoginForm.style.transform = "translateX(0px)";
+        Indicator.style.transform = "translateX(100px)";
+    }
+
+    function login() {
+        RegForm.style.transform = "translateX(500px)";
+        LoginForm.style.transform = "translateX(500px)";
+        Indicator.style.transform = "translateX(0px)";
+    }
+    
+
+
+  </script>
+
+
+
+
+  </body>
+</html>
