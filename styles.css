@@ -1,13 +1,62 @@
-* {
+/*---------------Start of entire page styling-----------------*/
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-/*Setting styling for the entire page*/
-
+}  
 body { /*Setting the entire body to be the Poppins font from google fonts*/
-  font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
+/*---------------End of page styling-----------------*/
+
+
+
+/*-----------------------Start of header styling------------------------*/
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0%;
+  right: 0;
+  z-index: 1000;
+  padding: 20px;
+  justify-content: space-between;
+  background-color: #fff;
+}
+
+.backgroundsong {
+  border-style: none;
+  text-align: center;
+  margin: auto;
+}
+
+audio {
+  display: inline-block;
+  width: 100px;
+  height: 25px;
+}
+
+audio::-webkit-media-controls-panel {
+  -webkit-justify-content: center;
+  height: 25px;
+}
+
+audio::-webkit-media-controls-timeline {
+  display: none !important;
+}
+
+audio::-webkit-media-controls-current-time-display {
+  display: none;
+}
+
+audio::-webkit-media-controls-time-remaining-display {
+  display: none;
+}
+
+audio::-webkit-media-controls-mute-button {
+  display: none;
+}
+
 
 /*Styling the navigation bar in header*/
 .navbar {
@@ -21,7 +70,6 @@ nav {
   text-align: right;
 }
 
-
 nav ul {
   display: inline-block;
   list-style-type: none;
@@ -32,8 +80,25 @@ nav ul li {
   margin-right: 20px;
 }
 
+nav ul a:hover{
+  color: #001689;
+}
+
+.nav-icon a {
+  font-size: 30px;
+}
+
+.nav-icon a:hover{
+  color: #001689;
+}
+
 /*End of navigation bar styling*/
 
+/*-----------------------End of header styling------------------------*/
+
+
+
+/*-----------------------Start of main content styling------------------------*/
 a {
     text-decoration: none;
     color: #555;
@@ -43,6 +108,9 @@ p {
     color: #555
 }
 
+
+
+/*-------Home page styling------*/
 .container {
     max-width: 1300px;
     margin:auto;
@@ -57,55 +125,11 @@ p {
     justify-content: space-around;
 }
 
-.col-2 {
-    flex-basis: 50%;
-    min-width: 300px;
-}
-
-.col-2 img {
-    max-width: 100%;
-    padding: 50px 0;
-}
-
-.col-2 h1 {
-    font-size: 50px;
-    line-height: 60px;
-    margin: 25px 0;
-}
-
-
-header {
-    position: fixed;
-    width: 100%;
-    top: 0%;
-    right: 0;
-    z-index: 1000;
-    justify-content: space-between;
-    padding: 20px 10%;
-    background-color: #fff;
-}
 
 .categories {
     margin: 70px 0;
 }
 
-.col-3 {
-    flex-basis: 30%;
-    min-width: 250px;
-    margin-bottom: 30px;
-}
-
-.col-3 img {
-    width: 100%;
-}
-
-.small-container {
-    max-width: 1080px;
-    margin: auto;
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-top: 200px;
-}
 
 .col-4 {
     flex-basis: 25%;
@@ -119,18 +143,52 @@ header {
     width: 100%;
 }
 
+.col-4 h2 {
+  color: #FEFBEA;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.col-4 p {
+  color: #FEFBEA;;
+  font-size: 14px;
+}
+
+
 .title {
     text-align: center;
-    margin: 0 auto 80px;
+    margin: 0 auto 30px;
     position: relative;
     line-height: 60px;
-    color: #555;
+    color: #333;
 }
 
 .title::after {
+  content: '';
+  background: #001689;
+  width: 200px;
+  height: 5px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.small-container .title {
+  text-align: center;
+  margin: 0 auto 30px;
+  position: relative;
+  line-height: 60px;
+  color: #FEFBEA;
+  font-weight: 500;
+}
+
+
+.small-container .title::after {
     content: '';
-    background: #001689;
-    width: 80px;
+    background: white;
+    width: 180px;
     height: 5px;
     border-radius: 5px;
     position: absolute;
@@ -139,24 +197,273 @@ header {
     transform: translateX(-50%);
 }
 
+.youtubevideo .title::after {
+  content: '';
+  background: #001689;
+  width: 200px;
+  height: 5px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.album .title::after {
+  content: '';
+  background: #001689;
+  width: 180px;
+  height: 5px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 h4 {
     color: #555;
     font-weight: normal;
-}
-
-.col-4 p {
-    font-size: 14px;
-}
-
-.rating.fa {
-    color: #001689;
 }
 
 .col-4:hover {
     transform: translateY(-5px);
 }
 
+.youtubevideo {
+  background: #a5a5a5;
+  align-items: center;
+  padding-bottom: 50px;
+}
 
+.iframecontainer {
+  display: block;
+  border-style: none;
+  text-align: center;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%;
+  width: 80%;
+}
+
+.youtubevideo iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.album {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.top-picks{
+  margin: auto;
+  background-color: #001689;
+}
+/*-------End of home page styling------*/
+
+
+/*-------About page styling------*/
+.about-us {
+  background-color: #001689;
+}
+
+.about-us h3 {
+  color: white;
+}
+
+.about-us p {
+  text-align: center;
+  color: white;
+}
+
+.about-us .title::after {
+  content: '';
+  background: white;
+  width: 100px;
+  height: 5px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.col-2 {
+  flex-basis: 50%;
+  padding: 10px;
+  min-width: 200px;
+  margin-bottom: 50px;
+  padding-top: 50px;
+  transition: transform 0.5s;
+}
+
+.col-2 img {
+  width: 100%;
+}
+
+.members .title::after {
+  content: '';
+  background: #001689;
+  width: 100px;
+  height: 5px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+.members .container {
+  position: relative;
+  width: 90%;
+  margin-bottom: 50px;
+}
+
+.members .image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay1 {
+  position: absolute;
+  top: 10%;
+  bottom: 0;
+  left: 20%;
+  right: 0;
+  height: 10%;
+  width: 10%;
+  transition: 0.5s ease;
+}
+
+.overlay2 {
+  position: absolute;
+  top: 15%;
+  bottom: 0;
+  left: 35%;
+  right: 0;
+  height: 10%;
+  width: 10%;
+  transition: 0.5s ease;
+}
+
+.overlay3 {
+  position: absolute;
+  top: 15%;
+  bottom: 0;
+  left: 50%;
+  right: 0;
+  height: 10%;
+  width: 10%;
+  transition: 0.5s ease;
+}
+
+.overlay4 {
+  position: absolute;
+  top: 10%;
+  bottom: 0;
+  left: 60%;
+  right: 0;
+  height: 10%;
+  width: 10%;
+  transition: 0.5s ease;
+}
+
+.col img {
+  padding-top: 150px;
+  visibility: hidden;
+  opacity: 0;
+  display: inline-block;
+  width: 100%;
+  transition: all 1s ease-out;
+}
+
+.overlay1:hover .col img {
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.5s ease-in;
+}
+
+.overlay2:hover .col img {
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.5s ease-in;
+}
+
+.overlay3:hover .col img {
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.5s ease-in;
+}
+
+.overlay4:hover .col img {
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.5s ease-in;
+}
+
+
+
+
+/*-------About page @media query to make it responsive------*/
+
+@media only screen and (max-width: 800px) {
+  .about-us {
+    padding-top: 100px;
+  }
+
+  .members .container {
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  
+  .col img {
+    width: 100%;
+    padding-top: 50px;
+  }
+  .overlay1 {
+    height: 20%;
+    width: 20%;
+  }
+  .overlay2 {
+    height: 20%;
+    width: 20%;
+  }
+  .overlay3 {
+    height: 20%;
+    width: 20%;
+  }
+  .overlay4 {
+    height: 20%;
+    width: 20%;
+  }
+
+
+
+}
+
+
+
+
+/*--------End of about page styling---------*/
+
+/*-----------------------End of main content styling------------------------*/
+
+
+
+
+
+/*-----------------------Start of footer styling------------------------*/
 footer {
     background-image: url(https://npr.brightspotcdn.com/legacy/wp-content/uploads/2022/07/the1975.jpg);
     background-size: cover;
@@ -197,7 +504,15 @@ ul {
     text-align: left;
     padding-left: 20px;
 }
+/*-----------------------End of footer styling------------------------*/
 
+
+
+
+
+/*-----------------------Making header nav bar responsive------------------------*/
+
+/*Hiding the menu icon until 800px breakpoint*/
 #menu-icon {
     font-size: 35px;
     width: 28px;
@@ -206,11 +521,14 @@ ul {
     display:none;
 }
 
+
+/*Using @media query to cater for smaller display*/
 @media only screen and (max-width: 800px) {
 
+  /*Make the header nav bar go into vertical mode at below 800px*/
     nav ul {
         position: absolute;
-        top: 70px;
+        top: 90px;
         left: 0;
         background: #333;
         width: 100%;
@@ -229,6 +547,7 @@ ul {
         color: #fff;
     }
 
+    /*Make menu icon appear at below 800px*/
     #menu-icon {
         display: block;
         cursor: pointer;
@@ -238,13 +557,33 @@ ul {
 }
 
 @media only screen and (max-width: 600px) {
-    .row {
+
+  .logo {
+    display: flex;
+    position: relative;
+    right: 12%;
+  }
+  .backgroundsong {
+    display: flex;
+    position: relative;
+    right: 18%;
+  }
+  .nav-icon {
+    display: flex;
+    position: relative;
+    right: 10%
+  }
+
+
+  /*Make page contents fill up the page one column at a time*/
+    .top-picks .row {
         text-align: center;
     }
     .col-2, .col-3, .col-4 {
         flex-basis: 100%;
     }
 
+    /*Make footer contents fill up in one column instead of side by side*/
     .footer-col-1 ul {
         text-align: center;
         padding-right: 0px;
@@ -256,9 +595,7 @@ ul {
     }
     
 }
-
+/*-----------------------End nav bar header responsive------------------------*/
 
 /*Slideshow styling*/
-
-
 

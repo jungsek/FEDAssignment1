@@ -1,64 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The 1975 by Jung Sek</title>
+    <title>The 1975</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" 
     href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"> 
-    <script src="script.js"></script>
-
-    <style>  /*Style for slideshow/carousell section*/
-      .mySlides {
-        display: none;
-      }
-      img {
-        vertical-align: middle;
-      }
+    <style>
+  /*-------------------Styling for slideshow container--------------------------*/      
+      .mySlides {display: none}
+      img {vertical-align: middle;}
 
       /* Slideshow container */
       .slideshow-container {
         max-width: 1000px;
         position: relative;
         margin: auto;
+        padding-top: 100px;
       }
 
-      /* Next & previous buttons */
-      .prev, .next {
-        cursor: pointer;
-        position: absolute;
-        top: 50%;
-        width: auto;
-        padding: 16px;
-        margin-top: -22px;
-        color: white;
-        font-weight: bold;
-        font-size: 18px;
-        transition: 0.6s ease;
-        border-radius: 0 3px 3px 0;
-        user-select: none;
-      }
-
-      
-      /* Position the "next button" to the right */
-      .next {
-        right: 0;
-        border-radius: 3px 0 0 3px;
-      }
-
-      /* On hover, add a black background color with a little bit see-through */
-      .prev:hover, .next:hover {
-        background-color: rgba(0,0,0,0.8);
-      }
-
-      
       /* The dots/bullets/indicators */
       .dot {
-        cursor: pointer;
         height: 15px;
         width: 15px;
         margin: 0 2px;
@@ -67,8 +33,8 @@
         display: inline-block;
         transition: background-color 0.6s ease;
       }
-   
-      .active, .dot:hover {
+
+      .active{
         background-color: #717171;
       }
 
@@ -79,165 +45,209 @@
       }
 
       @keyframes fade {
-        from {opacity: .4}
+        from {opacity: .4} 
         to {opacity: 1}
       }
-
 
       /* On smaller screens, decrease text size */
       @media only screen and (max-width: 300px) {
         .prev, .next,.text {font-size: 11px}
       }
+    </style>
 
-    </style> <!---End of slideshow styling---->
   </head>
 
 
   <body>
-    <div class="container"> <!-----Main page container----->
-      <header>
+  <div class="container">  <!----Main container---->
+    <header>               <!---Header section--->
+
+<!-----Navigation bar------->
+    <div class="navbar">   
+      <!---Image of Logo--->
+      <div class="logo">
+        <img src="The 1975 logo.png" width="125px">
+      </div>
+      <!-----Navigation bar------->
+      <nav>
+        <ul id="MenuItems">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="tours.html">Tours</a></li>
+          <li><a href="merch2.html">Merch</a></li>
+        </ul>
+      </nav>
+            <!------Play background audio------>
+            <div class="backgroundsong">
+              <audio controls controlsList="noplaybackrate" autoplay id="audio"> <!----Shows audio player controller & autoplays the song in background--->
+              <source src="The_1975_-_About_You.mp3" type="audio/mpeg">
+              Your browser does not support the audio element. <!----Display if browser does not support----->
+              </audio>
+              </div>
+  <!------End of background audio player------>
+      <!-----Navigation bar icons------->
+      <div class="nav-icon">
+        <a href="loginpage.html"><i class='bx bx-user'></i></a>
+        <a href="cart.html"><i class='bx bx-cart'></i></a>
+      </div>
+      <div class='bx bx-menu' id="menu-icon" onclick="menutoggle()"></div> <!-----Use javascript function------>
+    </div>
+    <!----End of navigation bar----------->
+    </header> <!-----End of header section------>
+
+  </div> <!------End of container-------->
+
+    <div class="categories">
       
-        <div class="navbar"> <!-------Start of navigation bar------>
-          <div class="logo">
-            <img src="The 1975 logo PNG.png" alt="The 1975 LOGO">
+      <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <img src="slideshow 1.png" style="width:100%">
+        </div>
+        
+        <div class="mySlides fade">
+          <img src="slideshow 2.png" style="width:100%">
+        </div>
+        
+        <div class="mySlides fade">
+          <img src="slideshow 3.png" style="width:100%">
+        </div>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+
+        <br>
+
+
+
+  <!-----End of slideshow----->
+      <div class="top-picks">
+      <div class="small-container">
+        <h2 class="title">Top picks for you</h2>
+        <div class="row">
+          
+          <div class="col-4">
+            <img src="vinyl1.png">
+            <h2>When we are together (2022)</h2>
+           <!--<p>The 1975 - Being Funny In A Foreign Language</p>-->
+            <p>23,621,716 plays</p>
           </div>
 
-          <nav>
+          <div class="col-4">
+            <img src="vinyl2.png">
+            <h2>Robbers (2013)</h2>
+          <!--<p>The 1975 - The 1975</p> -->
+            <p>343,992,633 plays</p>
+          </div>
+
+          <div class="col-4">
+            <img src="vinyl3.png">
+            <h2>Somebody Else (2016)</h2>
+           <!--<p>The 1975 - I Like It When You Sleep, For You Are So Beautif...</p>-->
+            <p>725,272,845 plays</p>
+          </div>
+
+          <div class="col-4">
+            <img src="vinyl4.png">
+            <h2>If You're Too Shy (Let Me Know) (2020)</h2>
+            <!--<p>The 1975 - Notes On A Conditional...</p>-->
+            <p>80,320,098 plays</p>
+          </div>
+
+        </div>
+      </div>
+      </div>
+
+        <!---Newest youtube video-->
+        <div class="youtubevideo">
+          <h3 class="title">Our newest YouTube video</h3>
+          <div class="iframecontainer">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/epjQAHfTXfo?si=3Fo_xuSfrG5DSOtO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+        </div>
+        <!---End of newest youtube video----------->
+
+          <!---Newest album-->
+        <div class="album">
+          <h3 class="title">Our Newest album</h4>
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/6dVCpQ7oGJD1oYs2fv1t5M?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+        <!---End of newest album--------->  
+
+    </div>
+
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="footer-col-1">
             <ul>
               <li><a href="index.html">Home</a></li>
               <li><a href="about.html">About</a></li>
               <li><a href="tours.html">Tours</a></li>
               <li><a href="merch.html">Merch</a></li>
             </ul>
-          </nav>
-
-          <div class="nav-icon">
-            <a href="loginpage.html"><i class='bx bx-user'></i></a>
-            <a href="cart.html"><i class='bx bx-cart'></i></a>
-          </div>
-
-          <div class='bx bx-menu' id="menu-icon" onclick="menutoggle()"></div>
-        </div> <!-------End of navigation bar--------->
-
-      </header>
-
-      <div class="categories"> <!-----Main content categories------->
-        <!---------Slideshow/Carousel section--------->
-        <div class="slideshow-container">
-
-          <div class="mySlides fade"> <!-----Slideshow picture 1-------->
-            <img src="Dtm_vQ-WsAE4Fqw.jpg-large.jpeg">
-          </div>
-
-          <div class="mySlides fade"> <!-----Slideshow picture 2-------->
-            <img src="The-1975.webp">
-          </div>
-
-          <div class="mySlides fade"> <!-----Slideshow picture 3-------->
-            <img src="2022_10_20_The_1975_X_Dork0498-Edit-scaled.webp">
-          </div>
-
-          <a class="prev" onclick="plusSlides(-1)">❮</a>
-          <a class="next" onclick="plusSlides(1)">❯</a>
-
         </div>
-        <br> <!-----Leave one line space------->
-
-        <div style="text-align: center"> <!------Buttons below the slideshow as indicatiors------->
-          <span class="dot" onclick="currentSlide(1)"></span> 
-          <span class="dot" onclick="currentSlide(2)"></span>
-          <span class="dot" onclick="currentSlide(3)"></span>
+        <div class="footer-col-2">
+            <ul>
+              <li><a href="https://www.instagram.com/the1975/?hl=en" target="_blank">Instagram</a></li>
+              <li><a href="https://www.facebook.com/the1975/" target="_blank">Facebook</a></li>
+              <li><a href="https://open.spotify.com/artist/3mIj9lX2MWuHmhNCA7LSCW" target="_blank">Spotify</a></li>
+              <li><a href="https://music.apple.com/us/artist/the-1975/542640016" target="_blank">Apple Music</a></li>
+            </ul>
         </div>
-        <br> <!------Leave one line space------->
-        <!------End of slideshow section----->
+      </div>
+    <hr>
+    <p class="Copyright">Copyright 2023 - The 1975</p>
+    </div>
+  </footer>
+
+  <script>
+    var MenuItems = document.getElementById("MenuItems");
+    MenuItems.style.maxHeight = "0px";
+    function menutoggle() {
+        if(MenuItems.style.maxHeight == "0px")
+        {
+            MenuItems.style.maxHeight = "200px";
+        }
+        else 
+        {
+            MenuItems.style.maxHeight = "0px";
+        }
+    }
+
+    
+let slideIndex = 0;
+showSlides();
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i=0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000);
+}
 
 
-        <!---------Top picks for you section----------->
-        <div class="small-container"> <!----Small container for Top picks section---->
-          <h2 class="title">Top picks for you!</h2>
-          <div class="row"> <!------One row of items-------->
 
-            <div class="col-4">
-              <img src="vinyl1.png">
-              <h2>When we are together (2022)</h2>
-              <p>The 1975 - Being Funny In A Foreign Language</p>
-              <p>23,621,716 plays</p>
-            </div>
+  </script>
 
-            <div class="col-4">
-              <img src="vinyl3.png">
-              <h2>Robbers (2013)</h2>
-              <p>The 1975 - The 1975</p>
-              <p>343,992,633 plays</p>
-            </div>
 
-            <div class="col-4">
-              <img src="vinyl2.png">
-              <h2>Somebody Else (2016)</h2>
-              <p>The 1975 - I Like It When You Sleep, For You Are So Beautif...</p>
-              <p>725,272,845 plays</p>
-            </div>
 
-            <div class="col-4">
-              <img src="vinyl4.png">
-              <h2>If You're Too Shy (Let Me Know) (2020)</h2>
-              <p>The 1975 - Notes On A Conditional...</p>
-              <p>80,320,098 plays</p>
-            </div>
 
-          </div> <!------End of item row------->
-
-        </div> <!----End of small container for Top picks section---->
-
-        <div class="small-container"> <!----Small container for Newest YouTube video---->
-
-          <div class="youtubevideo">
-            <h3 class="title">Our newest YouTube video</h3>
-            <p>The 1975-'At Their Very Best' Live From Madison Square Garden</p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/epjQAHfTXfo?si=3Fo_xuSfrG5DSOtO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div>
-
-        </div> <!-------End of youtube video section------->
-
-        <div class="small-container"> <!------Small container for newest album-------->
-
-          <div class="album">
-            <h4 class="title">Our Newest album</h4>
-            <p>The 1975 - Being Funny In A Foreign Language</p>
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/6dVCpQ7oGJD1oYs2fv1t5M?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-          </div>
-          
-        </div>
-
-      </div> <!----End of main content categories----->
-
-      <footer> <!-----Start of footer----->
-        <div class="container"> <!------Container for footer------->
-          <div class="row"> <!-----Row of items in footer------>
-
-            <div class="footer-col-1"> <!-----Column 1 of footer------>
-              <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="tours.html">Tours</a></li>
-                <li><a href="merch.html">Merch</a></li>
-              </ul>
-            </div> <!------End of column 1-------->
-
-            <div class="footer-col-2"> <!------Column 2 of footer------>
-              <ul>
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">YouTube</a></li>
-                <li><a href="#">Spotify</a></li>
-                <li><a href="#">Apple Music</a></li>
-              </ul>
-            </div> <!-----End of column 2------>
-          </div> <!-----End of row of items in footer----->
-          <hr> <!----Horizontal line------>
-          <p class="Copyright">Copyright 2023 - The 1975</p>
-        </div> <!-------End of container for footer------->
-      </footer> <!----End of footer------>
-
-    </div> <!------End of main page container-------->
   </body>
 </html>

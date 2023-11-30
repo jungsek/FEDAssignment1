@@ -1,69 +1,362 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The 1975 By Jung Sek</title>
-<link href="styles.css" rel="stylesheet" type="text/css"> <!---Refer to self-made stylesheet--->
-<link rel="stylesheet" 
-href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"> 
-<!------Refer to external stylesheet to access open source web icons for nav bar---> 
-</head>
-<body>
-  <header>  <!---Header section--->
-    
-    
-    <!---Image of Logo--->
-        <div class="logoimg">
-          <img src="The 1975 logo PNG.png" alt="The 1975 Logo">
-        </div>
-    
-    
-    <!-----Navigation bar------->
-        <nav class="topnav">
-          <ul class="topnavmenu">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="tours.html">Tours</a>    
-            <a href="merch.html">Merch</a>
-          </ul>
-        </nav>
-    <!-----Navigation bar icons------->
-        <div class="nav-icon">
-          <a href="#"><i class='bx bx-user'></i></a>
-          <a href="#"><i class='bx bx-cart'></i></a>
-          <div class='bx bx-menu' id="menu-icon"></div>
-        </div>  
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The 1975</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" 
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"> 
+
+    <style>
+        .mySlides {display: none}
+        img {vertical-align: middle;}
+
+        /* Slideshow container */
+        .slideshow-container {
+        max-width: 500px;
+        position: relative;
+        margin: auto;
+        padding-top: 100px;
+        }
+
+        /* Next & previous buttons */
+        .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover, .next:hover {
+        background-color: rgba(205, 175, 175, 0.8);
+        }
+
+        /* Caption text */
+        .text {
+        color: #f2f2f2;
+        font-size: 20px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 150px;
+        width: 100%;
+        text-align: center;
+        }
+
+
+        /* The dots/bullets/indicators */
+        .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+        }
+
+        .active, .dot:hover {
+        background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+        .prev, .next,.text {font-size: 11px}
+        }
+
+        .overlay {
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        right: 0;
+        background-color: #333;
+        overflow: hidden;
+        width: 100%;
+        height: 0;
+        transition: 0.5s ease;
+        }
+
+
+        .mySlides:hover .overlay{
+        bottom: 0;
+        height: 100%;
+        }
+
+        .overlay a {
+            font-size: 30px;
+            color: #001689;
+        }
+
+        .overlay a:hover{
+            color: white;
+        }
+
+    </style>
+
+  </head>
+
+
+  <body>
+  <div class="container">  <!----Main container---->
+    <header>               <!---Header section--->
+
+<!-----Navigation bar------->
+    <div class="navbar">   
+      <!---Image of Logo--->
+      <div class="logo">
+        <img src="The 1975 logo.png" width="125px">
+      </div>
+      <!-----Navigation bar------->
+      <nav>
+        <ul id="MenuItems">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="tours.html">Tours</a></li>
+          <li><a href="merch.html">Merch</a></li>
+        </ul>
+      </nav>
+            <!------Play background audio------>
+      <div class="backgroundsong">
+      <audio controls controlsList="noplaybackrate" autoplay id="audio"> <!----Shows audio player controller & autoplays the song in background--->
+      <source src="The_1975_-_About_You.mp3" type="audio/mpeg">
+      Your browser does not support the audio element. <!----Display if browser does not support----->
+      </audio>
+      </div>
+  <!------End of background audio player------>
+      <!-----Navigation bar icons------->
+      <div class="nav-icon">
+        <a href="loginpage.html"><i class='bx bx-user'></i></a>
+        <a href="cart.html"><i class='bx bx-cart'></i></a>
+      </div>
+      <div class='bx bx-menu' id="menu-icon" onclick="menutoggle()"></div> <!-----Use javascript function------>
+    </div>
     <!----End of navigation bar----------->
-    
-      </header> <!-----End of header section------>
+    </header> <!-----End of header section------>
 
-    <main id="main-content">
-      <!---About us text-->
-      <div class="about-us">
-        <h5>About Us</h5>
-        <p>The 1975 are an English pop rock band formed in Wilmslow in 2002. The band consists of Matty Healy (lead vocals, guitar, primary songwriter), Adam Hann (lead guitar), Ross MacDonald (bass), and George Daniel (drums, primary producer). The name of the band was inspired by a page of scribblings found in Healy's copy of On the Road by Jack Kerouac that was dated "1 June, The 1975". The band members met in secondary school and first performed together as teenagers in 2002, before professionally releasing music in 2012 under the independent label Dirty Hit. From 2012 to 2013, they opened for several major acts and released a series of extended plays—Facedown, Sex, Music for Cars, and IV—before releasing their UK chart-topping self-titled debut album (2013), which included the popular singles "Sex", "Chocolate", and "Robbers".</p>
-      </div>
+  </div> <!------End of container-------->
 
-      <div class="members">
-        <h6>Members</h6>
-            <div class="col2">
-                <img src="The-1975.jpg">
-                <button class="btn1"><span class="tooltiptext">Ross Macdonald</span></button>
-            </div>
-      </div>
+
+    <!---About us text-->
+    <div class="about-us">
+    <div class="row">
+        <div class="col-2">
+                <h3 class="title">About Us</h5>
+                <p>The 1975 are an English pop rock band formed in Wilmslow in 2002. The band consists of Matty Healy (lead vocals, guitar, primary songwriter), Adam Hann (lead guitar), Ross MacDonald (bass), and George Daniel (drums, primary producer). The name of the band was inspired by a page of scribblings found in Healy's copy of On the Road by Jack Kerouac that was dated "1 June, The 1975". The band members met in secondary school and first performed together as teenagers in 2002, before professionally releasing music in 2012 under the independent label Dirty Hit. From 2012 to 2013, they opened for several major acts and released a series of extended plays—Facedown, Sex, Music for Cars, and IV—before releasing their UK chart-topping self-titled debut album (2013), which included the popular singles "Sex", "Chocolate", and "Robbers".</p>
+        </div>
+        <div class="col-2">
+            <div class="slideshow-container">
+  
+                <div class="mySlides fade">
+                  <img src="Ross Macdonald Portrait.png" style="width:100%">
+                  <div class="overlay">
+                      <div class="text">
+                          <p>Ross Stewart Macdonald, 34</p>
+                          <p>Bassist, Joined 2002.</p>
+                          <p>Born 6 June 1989</p>
+                          <br>
+                          <p>"We all met in high school, and started making music together back in 2004."</p>
+                          <br>
+                          <a href="https://www.instagram.com/rass1975/?hl=en" target="_blank">Instagram</a>
+                          <br>
+                      </div>
+                  </div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <img src="Matty Healy Portrait.png" style="width:100%">
+                  <div class="overlay">
+                      <div class="text">
+                          <p>Matthew Timothy Healy, 34</p>
+                          <p>Lead vocalist, Joined 2002.</p>
+                          <p>Born 8 April 1989</p>
+                          <br>
+                          <p>"It all started off with punk-rock and pop covers, before beginning to write our own music."</p>
+                          <br>
+                          <a href="https://www.instagram.com/trumanblack/?hl=en" target="_blank">Instagram</a>
+                          <br>
+                      </div>
+                  </div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <img src="George Daniel Portrait.png" style="width:100%">
+                  <div class="overlay">
+                      <div class="text">
+                          <p>George Bedford Daniel, 33</p>
+                          <p>Drummer, Joined 2002.</p>
+                          <p>Born 23 March 1990</p>
+                          <br>
+                          <p>"We've really come a long way from our humble beginnings, and it's safe to that say our hard work has paid off."</p>
+                          <br>
+                          <a href="https://www.instagram.com/bedforddanes75/?hl=en" target="_blank">Instagram</a>
+                          <br>
+                      </div>
+                  </div>
+                </div>
       
-    </main>
+                <div class="mySlides fade">
+                  <img src="Adam Hann Portrait.png" style="width:100%">
+                  <div class="overlay">
+                      <div class="text">
+                          <p>Adam Brian Thomas Hann, 35</p>
+                          <p>Guitarist, Joined 2002.</p>
+                          <p>Born 20 June 1988</p>
+                          <br>
+                          <p>"We hope to be an inspiration to all the young, apsiring artists out there to pursue music and create beautiful art"</p>
+                          <br>
+                          <a href="https://www.instagram.com/1975adam/?hl=en" target="_blank">Instagram</a>
+                          <br>
+                      </div>
+                  </div>
+                </div>
+      
+                
+                  <a class="prev" onclick="plusSlides(-1)">❮</a>
+                  <a class="next" onclick="plusSlides(1)">❯</a>
+                
+                </div>
+                <br>
+                
+                <div style="text-align:center">
+                  <span class="dot" onclick="currentSlide(1)"></span> 
+                  <span class="dot" onclick="currentSlide(2)"></span> 
+                  <span class="dot" onclick="currentSlide(3)"></span> 
+                  <span class="dot" onclick="currentSlide(4)"></span> 
+                </div>
+        
+                <br>
+        </div>
+    </div>
+    </div>
+
+    <!-----Members section------>
+    <div class="members">
+        <h3 class="title">Members</h6>  
+        <div class="container">
+                <img src="The-1975.jpg" class="image">
+
+                <div class="overlay1">
+                    <div class="col"><img src="Ross Macdonald.png"></div>
+                </div>
+                
+                <div class="overlay2">
+                    <div class="col"><img src="Matty Healy.png"></div>
+                </div>
+
+                <div class="overlay3">
+                    <div class="col"><img src="George Daniel.png"></div>
+                </div>
+
+                <div class="overlay4">
+                    <div class="col"><img src="Adam Hann.png"></div>
+                </div>
+        </div>
+    </div>
+
+
 
   <footer>
-    <nav id="botnav">
-        <ul class="botnavmenu">
-          <a class="active" href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="tours.html">Tours</a>    
-          <a href="merch.html">Merch</a>
-        </ul>
-    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="footer-col-1">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="tours.html">Tours</a></li>
+              <li><a href="merch.html">Merch</a></li>
+            </ul>
+        </div>
+        <div class="footer-col-2">
+            <ul>
+              <li><a href="https://www.instagram.com/the1975/?hl=en" target="_blank">Instagram</a></li>
+              <li><a href="https://www.facebook.com/the1975/" target="_blank">Facebook</a></li>
+              <li><a href="https://open.spotify.com/artist/3mIj9lX2MWuHmhNCA7LSCW" target="_blank">Spotify</a></li>
+              <li><a href="https://music.apple.com/us/artist/the-1975/542640016" target="_blank">Apple Music</a></li>
+            </ul>
+        </div>
+      </div>
+    <hr>
+    <p class="Copyright">Copyright 2023 - The 1975</p>
+    </div>
   </footer>
-</body>
+
+  <script>
+    var MenuItems = document.getElementById("MenuItems");
+    MenuItems.style.maxHeight = "0px";
+    function menutoggle() {
+        if(MenuItems.style.maxHeight == "0px")
+        {
+            MenuItems.style.maxHeight = "200px";
+        }
+        else 
+        {
+            MenuItems.style.maxHeight = "0px";
+        }
+    }
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+    showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+    showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    }
+
+
+
+
+  </script>
+
+
+
+
+  </body>
 </html>
