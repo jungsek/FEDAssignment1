@@ -11,6 +11,7 @@
     <link rel="stylesheet" 
     href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"> 
 
+
   </head>
 
 
@@ -22,7 +23,7 @@
     <div class="navbar">   
       <!---Image of Logo--->
       <div class="logo">
-        <img src="images/The 1975 logo.png" width="125px">
+        <img src="images\The 1975 logo.png" width="125px">
       </div>
       <!-----Navigation bar------->
       <nav>
@@ -36,7 +37,7 @@
       </nav>
             <!------Play background audio------>
             <div class="backgroundsong">
-              <audio controls controlsList="noplaybackrate" id="audio"> <!----Shows audio player controller & plays the song in background--->
+              <audio controls controlsList="noplaybackrate" autoplay id="audio"> <!----Shows audio player controller & autoplays the song in background--->
               <source src="The_1975_-_About_You.mp3" type="audio/mpeg">
               Your browser does not support the audio element. <!----Display if browser does not support----->
               </audio>
@@ -53,44 +54,108 @@
     </header> <!-----End of header section------>
 
   </div> <!------End of container-------->
-  
 
- <!--------------Start of login page-------------->
-  <div class="account-page">
-    <div class="container">
+
+
+      <div class="discography">
+      <div class="small-container">
+        <h2 class="title">Discography</h2>
         <div class="row">
-            <div class="col">
-                <div class="form-container">
-                    <div class="form-btn">
-                        <span onclick="login()">Login</span>
-                        <span onclick="register()">Register</span>
-                        <hr id="indicator">
-                    </div>
-
-                    <form id="loginform">
-                        <input type="text" placeholder="Username">
-                        <input type="password" placeholder="Password">
-                        <button type="submit" class="btn">Login</button>
-                        <a href="">Forgot Password</a>
-                    </form>
-
-                    <form id="regform">
-                        <input type="text" placeholder="Username">
-                        <input type="email" placeholder="Email">
-                        <input type="password" placeholder="Password">
-                        <button type="submit" class="btn">Register</button>
-                    </form>
+          
+          <div class="col-4">
+            <a href="album1.html">
+            <div class="album-container">
+            <img src="images/Album 1.png">
+            <div class="overlay">
+                <div class="text">
+                    The 1975 - 2013 - 16 Songs - 50 min 50 sec
                 </div>
             </div>
+            </div>
+            <br>
+            <h2>The 1975</h2>
+            <br>
+            <p>2013</p>
+            </a>
+          </div>
+
+          <div class="col-4">
+            <a href="album2.html">
+            <div class="album-container">
+            <img src="images/Album 2.png">
+            <div class="overlay">
+                <div class="text">
+                    A Brief Inquiry Into Online Relationships - 2018 - 15 Songs - 58 min 33 sec
+                </div>
+            </div>
+            </div>
+            <br>
+            <h2>A Brief Inquiry Into Online Relationships</h2>
+            <br>
+            <p>2018</p>
+            </a>
+          </div>
+
+          <div class="col-4">
+            <a href="album3.html">
+            <div class="album-container">
+            <img src="images/Album 3.webp">
+            <div class="overlay">
+                <div class="text">
+                    Notes On A Conditional Form - 2020 - 22 Songs - 1 hr 20 min
+                </div>
+            </div>
+            </div>
+            <br>
+            <h2>Notes On A Conditional Form</h2>
+            <br>
+            <p>2020</p>
+            </a>
+          </div>
+
+          <div class="col-4">
+            <a href="album4.html">
+            <div class="album-container">
+            <img src="images/Album 4.webp">
+            <div class="overlay">
+                <div class="text">
+                    I Like It When You Sleep For You Are So Beautiful Yet So Unaware Of It - 2016 - 17 Songs - 1 hr 14 min
+                </div>
+            </div>
+            </div>
+            <br>
+            <h2>I Like It When You Sleep, For You Are So Beautiful Yet So Unaware Of It</h2>
+            <p>2016</p>
+            </a>
+          </div>
+
+          <div class="col-4">
+            <a href="album5.html">
+            <div class="album-container">
+            <img src="images/Album 5.webp">
+            <div class="overlay">
+                <div class="text">
+                    Being Funny In A Foreign Language - 2022 - 11 Songs - 43 min 32 sec
+                </div>
+            </div>
+            </div>
+            <br>
+            <h2>Being Funny In A Foreign Language</h2>
+            <br>
+            <p>2022</p>
+            </a>    
+          </div>
+
         </div>
-    </div>
-  </div>
-
-  <!--------------End of login page-------------->
+      </div>
+      </div>
 
 
 
- <!--------------Start of footer-------------->
+
+
+
+
   <footer>
     <div class="container">
       <div class="row">
@@ -131,22 +196,6 @@
         }
     }
 
-    var LoginForm = document.getElementById("loginform");
-    var RegForm =document.getElementById("regform");
-    var Indicator = document.getElementById("indicator");
-
-    function register() {
-        RegForm.style.transform = "translateX(0px)";
-        LoginForm.style.transform = "translateX(0px)";
-        Indicator.style.transform = "translateX(100px)";
-    }
-
-    function login() {
-        RegForm.style.transform = "translateX(500px)";
-        LoginForm.style.transform = "translateX(500px)";
-        Indicator.style.transform = "translateX(0px)";
-    }
-    
 
 
   </script>

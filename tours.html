@@ -1,49 +1,419 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The 1975 by Jung Sek</title>
-<link href="C:\Users\jungs\styles.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet"
-href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-</head>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The 1975</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" 
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"> 
 
-<body>
-  <main id="mainContent">
-    <header> 
-      <nav id="topnav">
-        <a class="active" href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="tours.html">Tours</a>
-        <a href="merch.html">Merch</a>
-      </nav>
-      <div id="1975logo">
-        <img src="The 1975 logo PNG.png" alt="The 1975 Logo">
+  </head>
+
+
+  <body>
+  <div class="container">  <!----Main container---->
+    <header>               <!---Header section--->
+
+<!-----Navigation bar------->
+    <div class="navbar">   
+      <!---Image of Logo--->
+      <div class="logo">
+        <img src="images/The 1975 logo.png" width="125px">
       </div>
-      <div id="backgroundImage"> 
-        <img src="1975 banner1.jpg" alt="The 1975 Banner">
-    </header>
+      <!-----Navigation bar------->
+      <nav>
+        <ul id="MenuItems">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="tours.html">Tours</a></li>
+          <li><a href="merch.html">Merch</a></li>
+          <li><a href="discography.html">Discography</a></li>
+        </ul>
+      </nav>
+            <!------Play background audio------>
+            <div class="backgroundsong">
+              <audio controls controlsList="noplaybackrate" id="audio"> <!----Shows audio player controller & plays the song in background--->
+              <source src="The_1975_-_About_You.mp3" type="audio/mpeg">
+              Your browser does not support the audio element. <!----Display if browser does not support----->
+              </audio>
+              </div>
+  <!------End of background audio player------>
+      <!-----Navigation bar icons------->
+      <div class="nav-icon">
+        <a href="loginpage.html"><i class='bx bx-user'></i></a>
+        <a href="cart.html"><i class='bx bx-cart'></i></a>
+      </div>
+      <div class='bx bx-menu' id="menu-icon" onclick="menutoggle()"></div> <!-----Use javascript function------>
+    </div>
+    <!----End of navigation bar----------->
+    </header> <!-----End of header section------>
 
-
+  </div> <!------End of container-------->
   
-    </main>
-  </body>
+
+ <!--------------Start of tours section-------------->
+<div class="tours-page">
+  <h2 class="title">Tours</h2>
+  <div class="table-container">
+  <table>
+
+    <tr>
+      <td>
+        <div class="table-row">
+          <div class="tour-info">
+            <h3>Dec 1 2023</h3>
+            <p>Moda Center</p>
+            <p>Portland, OR</p>
+          </div>
+          <div class="overlay" id="overlay">
+            <div class="text">SOLD OUT</div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="tickets">
+          <a href="https://www.livenation.sg/artist-the-1975-297804" target="_blank" class="btn">Get tickets</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="table-row">
+          <div class="tour-info">
+            <h3>Dec 2 2023</h3>
+            <p>Climate Pledge Arena</p>
+            <p>Seattle, WA</p>
+          </div>
+          <div class="overlay" id="overlay">
+            <div class="text">SOLD OUT</div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="tickets">
+          <a href="https://www.livenation.sg/artist-the-1975-297804" target="_blank" class="btn">Get tickets</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="table-row">
+          <div class="tour-info">
+            <h3>Jan 13 2024</h3>
+            <p>Honda Center</p>
+            <p>Anaheim, CA</p>
+          </div>
+          <div class="overlay" id="overlay">
+            <div class="text">SOLD OUT</div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="tickets">
+          <a href="https://www.livenation.sg/artist-the-1975-297804" target="_blank" class="btn">Get tickets</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="table-row">
+          <div class="tour-info">
+            <h3>Feb 8 2024</h3>
+            <p>OVO Hydro</p>
+            <p>Glasgow, UK</p>
+          </div>
+          <div class="overlay" id="overlay">
+            <div class="text">TICKETS LEFT: 150</div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="tickets">
+          <a href="https://www.livenation.sg/artist-the-1975-297804" target="_blank" class="btn">Get tickets</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="table-row">
+          <div class="tour-info">
+            <h3>Feb 9 2024</h3>
+            <p>OVO Hydro</p>
+            <p>Glasgow, UK</p>
+          </div>
+          <div class="overlay" id="overlay">
+            <div class="text">TICKETS LEFT: 209</div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="tickets">
+          <a href="https://www.livenation.sg/artist-the-1975-297804" target="_blank" class="btn">Get tickets</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="table-row">
+          <div class="tour-info">
+            <h3>Feb 12 2024</h3>
+            <p>The 02</p>
+            <p>London, UK</p>
+          </div>
+          <div class="overlay" id="overlay">
+            <div class="text">TICKETS LEFT: 200</div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="tickets">
+          <a href="https://www.livenation.sg/artist-the-1975-297804" target="_blank" class="btn">Get tickets</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="table-row">
+          <div class="tour-info">
+            <h3>Feb 14 2024</h3>
+            <p>The 02</p>
+            <p>London, UK</p>
+          </div>
+          <div class="overlay" id="overlay">
+            <div class="text">TICKETS LEFT: 200</div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="tickets">
+          <a href="https://www.livenation.sg/artist-the-1975-297804" target="_blank" class="btn">Get tickets</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="table-row">
+          <div class="tour-info">
+            <h3>Feb 17 2024</h3>
+            <p>AO Arena</p>
+            <p>Manchester, UK</p>
+          </div>
+          <div class="overlay" id="overlay">
+            <div class="text">TICKETS LEFT: 459</div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="tickets">
+          <a href="https://www.livenation.sg/artist-the-1975-297804" target="_blank" class="btn">Get tickets</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="table-row">
+          <div class="tour-info">
+            <h3>Feb 18 2024</h3>
+            <p>AO Arena</p>
+            <p>Manchester, UK</p>
+          </div>
+          <div class="overlay" id="overlay">
+            <div class="text">TICKETS LEFT: 560</div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="tickets">
+          <a href="https://www.livenation.sg/artist-the-1975-297804" target="_blank" class="btn">Get tickets</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="table-row">
+          <div class="tour-info">
+            <h3>Feb 20 2024</h3>
+            <p>Resorts World Arena</p>
+            <p>Birmingham, England</p>
+          </div>
+          <div class="overlay" id="overlay">
+            <div class="text">TICKETS LEFT: 669</div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="tickets">
+          <a href="https://www.livenation.sg/artist-the-1975-297804" target="_blank" class="btn">Get tickets</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="table-row">
+          <div class="tour-info">
+            <h3>Feb 26 2024</h3>
+            <p>Sagres Campo Pequeno</p>
+            <p>Lisbon, Portugal</p>
+          </div>
+          <div class="overlay" id="overlay">
+            <div class="text">TICKETS LEFT: 700</div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="tickets">
+          <a href="https://www.livenation.sg/artist-the-1975-297804" target="_blank" class="btn">Get tickets</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="table-row">
+          <div class="tour-info">
+            <h3>Feb 27 2024</h3>
+            <p>WiZink Center</p>
+            <p>Madrid, Spain</p>
+          </div>
+          <div class="overlay" id="overlay">
+            <div class="text">TICKETS LEFT: 777</div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="tickets">
+          <a href="https://www.livenation.sg/artist-the-1975-297804" target="_blank" class="btn">Get tickets</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="table-row">
+          <div class="tour-info">
+            <h3>Mar 1 2024</h3>
+            <p>Le Zenith</p>
+            <p>Paris, France</p>
+          </div>
+          <div class="overlay" id="overlay">
+            <div class="text">TICKETS LEFT: 889</div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="tickets">
+          <a href="https://www.livenation.sg/artist-the-1975-297804" target="_blank" class="btn">Get tickets</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="table-row">
+          <div class="tour-info">
+            <h3>Feb 12 2024</h3>
+            <p>The 02</p>
+            <p>London, UK</p>
+          </div>
+          <div class="overlay" id="overlay">
+            <div class="text">TICKETS LEFT: 200</div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="tickets">
+          <a href="https://www.livenation.sg/artist-the-1975-297804" target="_blank" class="btn">Get tickets</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="table-row">
+          <div class="tour-info">
+            <h3>Feb 12 2024</h3>
+            <p>The 02</p>
+            <p>London, UK</p>
+          </div>
+          <div class="overlay" id="overlay">
+            <div class="text">TICKETS LEFT: 200</div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="tickets">
+          <a href="https://www.livenation.sg/artist-the-1975-297804" target="_blank" class="btn">Get tickets</a>
+        </div>
+      </td>
+    </tr>
+
+  </table>
+  </div>
+</div>
+
+  <!--------------End of tours section-------------->
+
+
+
+ <!--------------Start of footer-------------->
   <footer>
-    <nav id="bottomnav">
-      <a class="active" href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="tours.html">Tours</a>
-      <a href="merch.html">Merch</a>
-    </nav>
-    <nav id="external">
-      <a class="active" href="https://www.instagram.com/the1975/?hl=en" target="_blank">Instagram</a>
-      <a href="https://www.facebook.com/the1975/" target="_blank">Facebook</a>
-      <a href="https://open.spotify.com/artist/3mIj9lX2MWuHmhNCA7LSCW" target="_blank">Spotify</a>
-      <a href="https://music.apple.com/us/artist/the-1975/542640016" target="_blank">Apple Music</a>
-    </nav>
-    <div id="backgroundImage"> 
-      <img src="the-1975-part-of-the-band.jpg" alt="The 1975 Banner" id="footerimage">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col-1">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="tours.html">Tours</a></li>
+              <li><a href="merch.html">Merch</a></li>
+              <li><a href="discography.html">Discography</a></li>
+            </ul>
+        </div>
+        <div class="footer-col-2">
+            <ul>
+              <li><a href="https://www.instagram.com/the1975/?hl=en" target="_blank">Instagram</a></li>
+              <li><a href="https://www.facebook.com/the1975/" target="_blank">Facebook</a></li>
+              <li><a href="https://open.spotify.com/artist/3mIj9lX2MWuHmhNCA7LSCW" target="_blank">Spotify</a></li>
+              <li><a href="https://music.apple.com/us/artist/the-1975/542640016" target="_blank">Apple Music</a></li>
+            </ul>
+        </div>
+      </div>
+    <hr>
+    <p class="Copyright">Copyright 2023 - The 1975</p>
     </div>
   </footer>
+
+  <script>
+    var MenuItems = document.getElementById("MenuItems");
+    MenuItems.style.maxHeight = "0px";
+    function menutoggle() {
+        if(MenuItems.style.maxHeight == "0px")
+        {
+            MenuItems.style.maxHeight = "200px";
+        }
+        else 
+        {
+            MenuItems.style.maxHeight = "0px";
+        }
+    }
+
+  </script>
+
+
+
+
+  </body>
 </html>
