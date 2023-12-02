@@ -53,6 +53,37 @@
       @media only screen and (max-width: 300px) {
         .prev, .next,.text {font-size: 11px}
       }
+
+
+      header {
+        background-color: rgba(0,0,0,0);
+        transition: all 1s ease;
+      }
+
+      .intro-video {
+        display: flex;
+      }
+
+      .intro-video video {
+        width: 100%;
+      }
+
+      .intro-video #small {
+        display: none;
+      }
+      
+      @media only screen and (max-width: 600px) {
+        .intro-video #big{
+          display: none;
+        }
+        .intro-video #small {
+          display: block;
+        }
+
+      }
+
+
+
     </style>
 
   </head>
@@ -60,8 +91,7 @@
 
   <body>
   <div class="container">  <!----Main container---->
-    <header>               <!---Header section--->
-
+    <header id="header">               <!---Header section--->
 <!-----Navigation bar------->
     <div class="navbar">   
       <!---Image of Logo--->
@@ -98,9 +128,19 @@
 
   </div> <!------End of container-------->
 
+    <div class="intro-video">
+      <video muted autoplay loop id="big"> <!---Video for big screens-->
+        <source src="the1975video.mp4" type="video/mp4">
+      </video>
+      <video muted autoplay loop id="small"> <!---Video for smaller screens-->
+        <source src="the1975videosmall.mp4" type="video/mp4">
+      </video>
+
+    </div>
+
     <div class="categories">
       
-      <div class="slideshow-container">
+      <div class="slideshow-container reveal">
 
         <div class="mySlides fade">
           <img src="images/slideshow 1.png" style="width:100%">
@@ -128,7 +168,7 @@
 
 
   <!-----End of slideshow----->
-      <div class="top-picks">
+      <div class="top-picks reveal">
       <div class="small-container">
         <h2 class="title">Top picks for you</h2>
         <div class="row">
@@ -162,7 +202,7 @@
       </div>
 
         <!---Newest youtube video-->
-        <div class="youtubevideo">
+        <div class="youtubevideo reveal">
           <h3 class="title">Our newest YouTube video</h3>
           <div class="iframecontainer">
           <iframe width="560" height="315" src="https://www.youtube.com/embed/epjQAHfTXfo?si=3Fo_xuSfrG5DSOtO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -171,7 +211,7 @@
         <!---End of newest youtube video----------->
 
           <!---Newest album-->
-        <div class="album">
+        <div class="album reveal">
           <h3 class="title">Our Newest album</h4>
           <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/6dVCpQ7oGJD1oYs2fv1t5M?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
@@ -221,25 +261,64 @@
     }
 
     
-let slideIndex = 0;
-showSlides();
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  for (i=0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 2000);
-}
+    let slideIndex = 0;
+    showSlides();
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i=0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 2000);
+    }
 
+    window.addEventListener('scroll', reveal);
+    function reveal() {
+      var reveals = document.querySelectorAll('.reveal');
+
+      for(var i = 0; i < reveals.length; i++) {
+        var windowheight = window.innerHeight;
+        var revealtop = reveals[i].getBoundingClientRect().top;
+        var revealpoint = 150;
+
+        if (revealtop < windowheight - revealpoint) {
+          reveals[i].classList.add('activereveal');
+        }
+
+      }
+    }
+
+    window.onscroll=function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (window.innerWidth > 600) {
+          if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+          document.getElementById("header").style.backgroundColor = "white";
+        }
+        else {
+          document.getElementById("header").style.backgroundColor = "rgba(0,0,0,0)";
+        }
+      }
+      else {
+        if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+        document.getElementById("header").style.backgroundColor = "white";
+      }
+      else {
+        document.getElementById("header").style.backgroundColor = "rgba(0,0,0,0)";
+      }
+      }
+
+
+    }
+ 
 
 
   </script>

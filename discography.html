@@ -37,7 +37,7 @@
       </nav>
             <!------Play background audio------>
             <div class="backgroundsong">
-              <audio controls controlsList="noplaybackrate" autoplay id="audio"> <!----Shows audio player controller & autoplays the song in background--->
+              <audio controls controlsList="noplaybackrate" id="audio"> <!----Shows audio player controller & autoplays the song in background--->
               <source src="The_1975_-_About_You.mp3" type="audio/mpeg">
               Your browser does not support the audio element. <!----Display if browser does not support----->
               </audio>
@@ -62,7 +62,7 @@
         <h2 class="title">Discography</h2>
         <div class="row">
           
-          <div class="col-4">
+          <div class="col-4 reveal">
             <a href="album1.html">
             <div class="album-container">
             <img src="images/Album 1.png">
@@ -79,7 +79,7 @@
             </a>
           </div>
 
-          <div class="col-4">
+          <div class="col-4 reveal">
             <a href="album2.html">
             <div class="album-container">
             <img src="images/Album 2.png">
@@ -96,7 +96,7 @@
             </a>
           </div>
 
-          <div class="col-4">
+          <div class="col-4 reveal">
             <a href="album3.html">
             <div class="album-container">
             <img src="images/Album 3.webp">
@@ -113,7 +113,7 @@
             </a>
           </div>
 
-          <div class="col-4">
+          <div class="col-4 reveal">
             <a href="album4.html">
             <div class="album-container">
             <img src="images/Album 4.webp">
@@ -129,7 +129,7 @@
             </a>
           </div>
 
-          <div class="col-4">
+          <div class="col-4 reveal">
             <a href="album5.html">
             <div class="album-container">
             <img src="images/Album 5.webp">
@@ -194,6 +194,22 @@
         {
             MenuItems.style.maxHeight = "0px";
         }
+    }
+
+    window.addEventListener('scroll', reveal);
+    function reveal() {
+      var reveals = document.querySelectorAll('.reveal');
+
+      for(var i = 0; i < reveals.length; i++) {
+        var windowheight = window.innerHeight;
+        var revealtop = reveals[i].getBoundingClientRect().top;
+        var revealpoint = 150;
+
+        if (revealtop < windowheight - revealpoint) {
+          reveals[i].classList.add('activereveal');
+        }
+
+      }
     }
 
 

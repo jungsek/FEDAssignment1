@@ -110,11 +110,7 @@
       <div class="product-details">
       <div class="small-container">
 
-
-
- 
-
-          <div class="row">
+          <div class="row reveal">
             <div class="col-4">
               <img src="images/9.webp">
               <h2>Notes > Self Titled T-Shirt</h2>
@@ -238,6 +234,22 @@
 
     SmallImg[3].onclick = function(){
         ProductImg.src = SmallImg[3].src;
+    }
+
+    window.addEventListener('scroll', reveal);
+    function reveal() {
+      var reveals = document.querySelectorAll('.reveal');
+
+      for(var i = 0; i < reveals.length; i++) {
+        var windowheight = window.innerHeight;
+        var revealtop = reveals[i].getBoundingClientRect().top;
+        var revealpoint = 150;
+
+        if (revealtop < windowheight - revealpoint) {
+          reveals[i].classList.add('activereveal');
+        }
+
+      }
     }
 
 

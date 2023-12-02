@@ -161,7 +161,7 @@
       </td>
     </tr>
 
-    <tr>
+    <tr class="reveal">
       <td>
         <div class="table-row">
           <div class="tour-info">
@@ -181,7 +181,7 @@
       </td>
     </tr>
 
-    <tr>
+    <tr class="reveal">
       <td>
         <div class="table-row">
           <div class="tour-info">
@@ -201,7 +201,7 @@
       </td>
     </tr>
 
-    <tr>
+    <tr class="reveal">
       <td>
         <div class="table-row">
           <div class="tour-info">
@@ -221,7 +221,7 @@
       </td>
     </tr>
 
-    <tr>
+    <tr class="reveal">
       <td>
         <div class="table-row">
           <div class="tour-info">
@@ -241,7 +241,7 @@
       </td>
     </tr>
 
-    <tr>
+    <tr class="reveal">
       <td>
         <div class="table-row">
           <div class="tour-info">
@@ -261,7 +261,7 @@
       </td>
     </tr>
 
-    <tr>
+    <tr class="reveal">
       <td>
         <div class="table-row">
           <div class="tour-info">
@@ -281,7 +281,7 @@
       </td>
     </tr>
 
-    <tr>
+    <tr class="reveal">
       <td>
         <div class="table-row">
           <div class="tour-info">
@@ -301,7 +301,7 @@
       </td>
     </tr>
 
-    <tr>
+    <tr class="reveal">
       <td>
         <div class="table-row">
           <div class="tour-info">
@@ -321,7 +321,7 @@
       </td>
     </tr>
 
-    <tr>
+    <tr class="reveal">
       <td>
         <div class="table-row">
           <div class="tour-info">
@@ -341,7 +341,7 @@
       </td>
     </tr>
 
-    <tr>
+    <tr class="reveal">
       <td>
         <div class="table-row">
           <div class="tour-info">
@@ -408,6 +408,22 @@
         {
             MenuItems.style.maxHeight = "0px";
         }
+    }
+
+    window.addEventListener('scroll', reveal);
+    function reveal() {
+      var reveals = document.querySelectorAll('.reveal');
+
+      for(var i = 0; i < reveals.length; i++) {
+        var windowheight = window.innerHeight;
+        var revealtop = reveals[i].getBoundingClientRect().top;
+        var revealpoint = 150;
+
+        if (revealtop < windowheight - revealpoint) {
+          reveals[i].classList.add('activereveal');
+        }
+
+      }
     }
 
   </script>

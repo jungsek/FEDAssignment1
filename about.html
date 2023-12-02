@@ -149,7 +149,7 @@
       </nav>
             <!------Play background audio------>
       <div class="backgroundsong">
-      <audio controls controlsList="noplaybackrate" autoplay id="audio"> <!----Shows audio player controller & autoplays the song in background--->
+      <audio controls controlsList="noplaybackrate" id="audio"> <!----Shows audio player controller & autoplays the song in background--->
       <source src="The_1975_-_About_You.mp3" type="audio/mpeg">
       Your browser does not support the audio element. <!----Display if browser does not support----->
       </audio>
@@ -169,7 +169,7 @@
 
 
     <!---About us text-->
-    <div class="about-us">
+    <div class="about-us reveal">
     <div class="row">
         <div class="col-2">
                 <h3 class="title">About Us</h5>
@@ -262,7 +262,7 @@
     </div>
 
     <!-----Members section------>
-    <div class="members">
+    <div class="members reveal">
         <h3 class="title">Members</h6>  
         <div class="container">
                 <img src="images/The-1975.jpg" class="image">
@@ -351,6 +351,22 @@
     }
     slides[slideIndex-1].style.display = "block";  
     dots[slideIndex-1].className += " active";
+    }
+
+    window.addEventListener('scroll', reveal);
+    function reveal() {
+      var reveals = document.querySelectorAll('.reveal');
+
+      for(var i = 0; i < reveals.length; i++) {
+        var windowheight = window.innerHeight;
+        var revealtop = reveals[i].getBoundingClientRect().top;
+        var revealpoint = 150;
+
+        if (revealtop < windowheight - revealpoint) {
+          reveals[i].classList.add('activereveal');
+        }
+
+      }
     }
 
 

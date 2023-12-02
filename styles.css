@@ -11,7 +11,11 @@ body { /*Setting the entire body to be the Poppins font from google fonts*/
 
 
 
+
+
+
 /*-----------------------Start of header styling------------------------*/
+
 
 header {
   position: fixed;
@@ -39,6 +43,7 @@ audio {
 audio::-webkit-media-controls-panel {
   -webkit-justify-content: center;
   height: 25px;
+  background-color: rgba(0,0,0,0);
 }
 
 audio::-webkit-media-controls-timeline {
@@ -801,7 +806,7 @@ th:last-child {         /*Make price appear on right hand side*/
 .tours-page {
   padding-top: 150px;
   padding-bottom: 100px;
-  background-color: #001689;
+  background-color: #000d51;
 }
 
 .tours-page .table-container {
@@ -819,7 +824,7 @@ th:last-child {         /*Make price appear on right hand side*/
 }
 
 .tours-page .title::after{
-  background-color: #7d7d7d;
+  background-color: white;
 }
 
 .tours-page h3 {
@@ -876,7 +881,7 @@ th:last-child {         /*Make price appear on right hand side*/
 }
 
 .tours-page tr:hover {
-  background-color: #000d51;
+  background-color: #001689;
   font-size: 30px;
 }
 
@@ -896,7 +901,7 @@ tr:hover {
 }
 
 tr:hover .overlay {
-  width: 0;
+  display: none;
 }
 
   
@@ -1179,5 +1184,18 @@ ul {
 }
 /*-----------------------End nav bar header responsive------------------------*/
 
-/*Slideshow styling*/
 
+
+/*-----------------------Styling page for Javascript function------------------------*/
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+.reveal.activereveal {
+  transform: translateY(0px);
+  opacity: 1;
+}
+/*-----------------------End of styling page for Javascript function------------------------*/

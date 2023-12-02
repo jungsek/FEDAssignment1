@@ -58,7 +58,7 @@
       <div class="merch">
       <div class="small-container">
 
-        <div class="row row-2">
+        <div class="row row-2 reveal">
             <h2>Merch</h2>
             <select>
                 <option>Default Sorting</option>
@@ -70,7 +70,7 @@
         </div>
 
 
-        <div class="row">
+        <div class="row reveal">
           <div class="col-4">
             <a href="product-detail.html">
             <img src="images/1.webp">
@@ -127,7 +127,7 @@
 
         </div>
 
-        <div class="row">
+        <div class="row reveal">
             <div class="col-4">
               <img src="images/5.webp">
               <h2>The 1975 10 YR T-Shirt</h2>
@@ -182,7 +182,7 @@
   
           </div>
 
-          <div class="row">
+          <div class="row reveal">
             <div class="col-4">
               <img src="images/9.webp">
               <h2>Sex T-Shirt</h2>
@@ -290,6 +290,22 @@
         {
             MenuItems.style.maxHeight = "0px";
         }
+    }
+
+    window.addEventListener('scroll', reveal);
+    function reveal() {
+      var reveals = document.querySelectorAll('.reveal');
+
+      for(var i = 0; i < reveals.length; i++) {
+        var windowheight = window.innerHeight;
+        var revealtop = reveals[i].getBoundingClientRect().top;
+        var revealpoint = 150;
+
+        if (revealtop < windowheight - revealpoint) {
+          reveals[i].classList.add('activereveal');
+        }
+
+      }
     }
 
 
