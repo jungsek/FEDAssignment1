@@ -38,7 +38,7 @@
         background-color: #717171;
       }
 
-      /* Fading animation */
+      /* Fading animation */      
       .fade {
         animation-name: fade;
         animation-duration: 1.5s;
@@ -90,13 +90,13 @@
 
 
   <body>
-  <div class="container">  <!----Main container---->
+  <div class="container">  <!---container---->
     <header id="header">               <!---Header section--->
 <!-----Navigation bar------->
     <div class="navbar">   
       <!---Image of Logo--->
       <div class="logo">
-        <img src="images\The 1975 logo.png" width="125px">
+        <img src="images\The-1975-logo.png" width="125px">
       </div>
       <!-----Navigation bar------->
       <nav>
@@ -110,7 +110,7 @@
       </nav>
             <!------Play background audio------>
             <div class="backgroundsong">
-              <audio controls controlsList="noplaybackrate" autoplay id="audio"> <!----Shows audio player controller & autoplays the song in background--->
+              <audio controls controlsList="noplaybackrate" controlsList="nodownload" autoplay id="audio"> <!----Shows audio player controller & autoplays the song in background--->
               <source src="The_1975_-_About_You.mp3" type="audio/mpeg">
               Your browser does not support the audio element. <!----Display if browser does not support----->
               </audio>
@@ -128,35 +128,38 @@
 
   </div> <!------End of container-------->
 
+  <!------Intro video section-------->
     <div class="intro-video">
       <video muted autoplay loop id="big"> <!---Video for big screens-->
-        <source src="the1975video.mp4" type="video/mp4">
+        <source src="videos/the1975video.mp4" type="video/mp4">
       </video>
       <video muted autoplay loop id="small"> <!---Video for smaller screens-->
-        <source src="the1975videosmall.mp4" type="video/mp4">
+        <source src="videos/the1975videosmall.mp4" type="video/mp4">
       </video>
-
     </div>
+    <!------End of intro video section-------->
 
-    <div class="categories">
-      
+
+    <!------Main content-------->
+    <div class="content"> 
+      <!------Slideshow-------->
       <div class="slideshow-container reveal">
 
         <div class="mySlides fade">
-          <img src="images/slideshow 1.png" style="width:100%">
+          <img src="images/slideshow1.png" style="width:100%">
         </div>
         
         <div class="mySlides fade">
-          <img src="images/slideshow 2.png" style="width:100%">
+          <img src="images/slideshow2.png" style="width:100%">
         </div>
         
         <div class="mySlides fade">
-          <img src="images/slideshow 3.png" style="width:100%">
+          <img src="images/slideshow3.png" style="width:100%">
         </div>
         
         </div>
         <br>
-        
+        <!------Dot indicators-------->
         <div style="text-align:center">
           <span class="dot" onclick="currentSlide(1)"></span> 
           <span class="dot" onclick="currentSlide(2)"></span> 
@@ -164,10 +167,9 @@
         </div>
 
         <br>
-
-
-
   <!-----End of slideshow----->
+
+  <!------Top picks section-------->
       <div class="top-picks reveal">
       <div class="small-container">
         <h2 class="title">Top picks for you</h2>
@@ -200,6 +202,7 @@
         </div>
       </div>
       </div>
+      <!------End of top picks section-------->
 
         <!---Newest youtube video-->
         <div class="youtubevideo reveal">
@@ -216,10 +219,8 @@
           <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/6dVCpQ7oGJD1oYs2fv1t5M?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
         <!---End of newest album--------->  
-
     </div>
-
-
+<!------Footer-------->
   <footer>
     <div class="container">
       <div class="row">
@@ -245,22 +246,12 @@
     <p class="Copyright">Copyright 2023 - The 1975</p>
     </div>
   </footer>
+  <!------End of footer-------->
 
-  <script>
-    var MenuItems = document.getElementById("MenuItems");
-    MenuItems.style.maxHeight = "0px";
-    function menutoggle() {
-        if(MenuItems.style.maxHeight == "0px")
-        {
-            MenuItems.style.maxHeight = "200px";
-        }
-        else 
-        {
-            MenuItems.style.maxHeight = "0px";
-        }
-    }
+  <script src="script.js"></script>  <!------Link to external js file-------->
 
-    
+  <!-------INLINE SCRIPT FOR AUTOMATIC SLIDESHOW-------->
+  <script> 
     let slideIndex = 0;
     showSlides();
     function showSlides() {
@@ -280,22 +271,8 @@
       setTimeout(showSlides, 2000);
     }
 
-    window.addEventListener('scroll', reveal);
-    function reveal() {
-      var reveals = document.querySelectorAll('.reveal');
 
-      for(var i = 0; i < reveals.length; i++) {
-        var windowheight = window.innerHeight;
-        var revealtop = reveals[i].getBoundingClientRect().top;
-        var revealpoint = 150;
-
-        if (revealtop < windowheight - revealpoint) {
-          reveals[i].classList.add('activereveal');
-        }
-
-      }
-    }
-
+    /*JS FUNCTION FOR HEADER BACKGROUND COLOR from transparent to white ON SCROLL FUNCTION*/
     window.onscroll=function() {scrollFunction()};
 
     function scrollFunction() {
@@ -318,13 +295,7 @@
 
 
     }
- 
-
-
   </script>
-
-
-
 
   </body>
 </html>

@@ -1,7 +1,10 @@
 My band website:
 The band: The 1975.
 
-Pages will include Home, About, Tours, Merch.
+Intent audience, fans of 1975 band and incoming fans.
+Gives fans a page that allows them to see their favourite band and discover new songs and learn more
+
+Pages will include Home, About, Tours, Merch and discography.
 
 All pages will include a concurrent theme; Blue, white, black, and grey colour scheme, Header will have a navigation bar for all 4 pages that is a simplistic bar at the top of the page, song playing in the background, control bar for background song, as well as ‘The 1975’ logo and banner that will be in every header. Will add a function such that after 5s of loading into the page, will automatically scroll past the logo and banner down to the main content of each page. Will also have footer with a different banner/picture, and bottom navigation bar as well as external links to the social medias and different platforms.
 
@@ -13,7 +16,7 @@ For Tours page, will simply include a table of contents of each tour details, in
 
 For Merch page, will use flexboxes to showcase each merchandise item with the details and price below, using a 2x2 format for desktop view and 1x1 format for mobile view. When click will lead to external site to allow them to purchase the merchandise item
 
-
+For mdiscogrpahy page, will have
 
 
 
@@ -42,6 +45,6 @@ https://www.google.com/imgres?imgurl=https%3A%2F%2Flookaside.fbsbx.com%2Flookasi
 The 1975 banner (Header):
 https://www.google.com/imgres?imgurl=https%3A%2F%2Fimages.theskinny.co.uk%2Fassets%2Fproduction%2F000%2F144%2F993%2F144993_widescreen.1.jpg&tbnid=00j65MYnGv70dM&vet=12ahUKEwj63bK6tNCCAxULzaACHZcBCuIQMygBegQIARBF..i&imgrefurl=https%3A%2F%2Fwww.theskinny.co.uk%2Fmusic%2Freviews%2Falbums%2Fthe-1975-being-funny-in-a-foreign-language&docid=3EGTqEaaAGkIGM&w=970&h=412&q=the%201975%20being%20funny%20in%20a%20foreign%20language%20high%20res&ved=2ahUKEwj63bK6tNCCAxULzaACHZcBCuIQMygBegQIARBF
 The 1975 banner (Footer):
-https://www.google.com/imgres?imgurl=https%3A%2F%2Fnpr.brightspotcdn.com%2Flegacy%2Fwp-content%2Fuploads%2F2022%2F07%2Fthe1975.jpg&tbnid=lbnnfqt_1OAMWM&vet=12ahUKEwj63bK6tNCCAxULzaACHZcBCuIQMygNegQIARBd..i&imgrefurl=https%3A%2F%2Fwww.lpm.org%2Fmusic%2F2022-07-08%2Fvideo-the-1975-shared-the-first-single-from-upcoming-lp-being-funny-in-a-foreign-language&docid=hCOGPRcIcZlljM&w=1920&h=1080&q=the%201975%20being%20funny%20in%20a%20foreign%20language%20high%20res&ved=2ahUKEwj63bK6tNCCAxULzaACHZcBCuIQMygNegQIARBd
+https://npr.brightspotcdn.com/legacy/wp-content/uploads/2022/07/the1975.jpg
 
-
+External source code: w3schools.com

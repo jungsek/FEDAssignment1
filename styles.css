@@ -62,6 +62,11 @@ audio::-webkit-media-controls-mute-button {
   display: none;
 }
 
+audio::-webkit-media-controls-volume-slider {
+  display: none !important;
+}
+
+
 
 /*Styling the navigation bar in header*/
 .navbar {
@@ -131,7 +136,7 @@ p {
 }
 
 
-.categories {
+.content {
     margin: 70px 0;
 }
 
@@ -465,7 +470,7 @@ h4 {
 /*-------Login page styling------*/
 .account-page {
   padding: 250px;
-  background-image: url("images/1975 banner1.jpg");
+  background-image: url("images/1975-banner1.jpg");
   background-size: cover;
   background-position: center;
   font-size: 14px;
@@ -550,6 +555,15 @@ form a {
   margin-top: 8px;
   transform: translateX(100px);
   transition: transform 1s;
+}
+
+@media only screen and (max-width: 600px) {
+  .account-page {
+    padding: 50px;
+    padding-top: 250px;
+    padding-bottom: 100px;
+  }
+
 }
 
 /*-------End of login page styling------*/

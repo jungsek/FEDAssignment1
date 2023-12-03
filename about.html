@@ -12,6 +12,7 @@
     href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"> 
 
     <style>
+    /*-------------------Inline Styling for slideshow container--------------------------*/  
         .mySlides {display: none}
         img {vertical-align: middle;}
 
@@ -94,6 +95,7 @@
         .prev, .next,.text {font-size: 11px}
         }
 
+     /*-------------------Inline Styling for slideshow overlays--------------------------*/  
         .overlay {
         position: absolute;
         bottom: 100%;
@@ -128,14 +130,14 @@
 
 
   <body>
-  <div class="container">  <!----Main container---->
+  <div class="container">  <!--- container---->
     <header>               <!---Header section--->
 
 <!-----Navigation bar------->
     <div class="navbar">   
       <!---Image of Logo--->
       <div class="logo">
-        <img src="images/The 1975 logo.png" width="125px">
+        <img src="images/The-1975-logo.png" width="125px">
       </div>
       <!-----Navigation bar------->
       <nav>
@@ -168,18 +170,20 @@
   </div> <!------End of container-------->
 
 
-    <!---About us text-->
+    <!---About us section-->
     <div class="about-us reveal">
     <div class="row">
+<!---About us text-->
         <div class="col-2">
                 <h3 class="title">About Us</h5>
                 <p>The 1975 are an English pop rock band formed in Wilmslow in 2002. The band consists of Matty Healy (lead vocals, guitar, primary songwriter), Adam Hann (lead guitar), Ross MacDonald (bass), and George Daniel (drums, primary producer). The name of the band was inspired by a page of scribblings found in Healy's copy of On the Road by Jack Kerouac that was dated "1 June, The 1975". The band members met in secondary school and first performed together as teenagers in 2002, before professionally releasing music in 2012 under the independent label Dirty Hit. From 2012 to 2013, they opened for several major acts and released a series of extended plays—Facedown, Sex, Music for Cars, and IV—before releasing their UK chart-topping self-titled debut album (2013), which included the popular singles "Sex", "Chocolate", and "Robbers".</p>
         </div>
+<!---About us slideshow-->
         <div class="col-2">
             <div class="slideshow-container">
   
                 <div class="mySlides fade">
-                  <img src="images/Ross Macdonald Portrait.png" style="width:100%">
+                  <img src="images/Ross-Macdonald-Portrait.png" style="width:100%">
                   <div class="overlay">
                       <div class="text">
                           <p>Ross Stewart Macdonald, 34</p>
@@ -195,7 +199,7 @@
                 </div>
                 
                 <div class="mySlides fade">
-                  <img src="images/Matty Healy Portrait.png" style="width:100%">
+                  <img src="images/Matty-Healy-Portrait.png" style="width:100%">
                   <div class="overlay">
                       <div class="text">
                           <p>Matthew Timothy Healy, 34</p>
@@ -211,7 +215,7 @@
                 </div>
                 
                 <div class="mySlides fade">
-                  <img src="images/George Daniel Portrait.png" style="width:100%">
+                  <img src="images/George-Daniel-Portrait.png" style="width:100%">
                   <div class="overlay">
                       <div class="text">
                           <p>George Bedford Daniel, 33</p>
@@ -227,7 +231,7 @@
                 </div>
       
                 <div class="mySlides fade">
-                  <img src="images/Adam Hann Portrait.png" style="width:100%">
+                  <img src="images/Adam-Hann-Portrait.png" style="width:100%">
                   <div class="overlay">
                       <div class="text">
                           <p>Adam Brian Thomas Hann, 35</p>
@@ -257,9 +261,9 @@
                 </div>
         
                 <br>
-        </div>
-    </div>
-    </div>
+        </div><!---End of About us slideshow-->
+      </div><!---About us row-->
+    </div><!---About us section-->
 
     <!-----Members section------>
     <div class="members reveal">
@@ -268,25 +272,26 @@
                 <img src="images/The-1975.jpg" class="image">
 
                 <div class="overlay1">
-                    <div class="col"><img src="images/Ross Macdonald.png"></div>
+                    <div class="col"><img src="images/Ross-Macdonald.png"></div>
                 </div>
                 
                 <div class="overlay2">
-                    <div class="col"><img src="images/Matty Healy.png"></div>
+                    <div class="col"><img src="images/Matty-Healy.png"></div>
                 </div>
 
                 <div class="overlay3">
-                    <div class="col"><img src="images/George Daniel.png"></div>
+                    <div class="col"><img src="images/George-Daniel.png"></div>
                 </div>
 
                 <div class="overlay4">
-                    <div class="col"><img src="images/Adam Hann.png"></div>
+                    <div class="col"><img src="images/Adam-Hann.png"></div>
                 </div>
         </div>
     </div>
+    <!---End of members section-->
 
 
-
+<!---Footer-->
   <footer>
     <div class="container">
       <div class="row">
@@ -312,20 +317,12 @@
     <p class="Copyright">Copyright 2023 - The 1975</p>
     </div>
   </footer>
+  <!---End of footer-->
 
+  <script src="script.js"></script> <!---Link to external js file--> 
+
+  <!-----INLINE SCRIPT FOR CLICKABLE SLIDESHOW----->
   <script>
-    var MenuItems = document.getElementById("MenuItems");
-    MenuItems.style.maxHeight = "0px";
-    function menutoggle() {
-        if(MenuItems.style.maxHeight == "0px")
-        {
-            MenuItems.style.maxHeight = "200px";
-        }
-        else 
-        {
-            MenuItems.style.maxHeight = "0px";
-        }
-    }
     let slideIndex = 1;
     showSlides(slideIndex);
 
@@ -352,30 +349,9 @@
     slides[slideIndex-1].style.display = "block";  
     dots[slideIndex-1].className += " active";
     }
-
-    window.addEventListener('scroll', reveal);
-    function reveal() {
-      var reveals = document.querySelectorAll('.reveal');
-
-      for(var i = 0; i < reveals.length; i++) {
-        var windowheight = window.innerHeight;
-        var revealtop = reveals[i].getBoundingClientRect().top;
-        var revealpoint = 150;
-
-        if (revealtop < windowheight - revealpoint) {
-          reveals[i].classList.add('activereveal');
-        }
-
-      }
-    }
-
-
-
-
   </script>
-
-
-
-
+  
   </body>
 </html>
+
+

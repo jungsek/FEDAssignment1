@@ -13,16 +13,14 @@
 
   </head>
 
-
   <body>
-  <div class="container">  <!----Main container---->
+  <div class="container">  <!----container---->
     <header>               <!---Header section--->
-
 <!-----Navigation bar------->
     <div class="navbar">   
       <!---Image of Logo--->
       <div class="logo">
-        <img src="images/The 1975 logo.png" width="125px">
+        <img src="images/The-1975-logo.png" width="125px">
       </div>
       <!-----Navigation bar------->
       <nav>
@@ -60,7 +58,7 @@
   <h2 class="title">Tours</h2>
   <div class="table-container">
   <table>
-
+<!---Tours table-->
     <tr>
       <td>
         <div class="table-row">
@@ -360,8 +358,8 @@
         </div>
       </td>
     </tr>
-
   </table>
+  <!---End of Tours table-->
   </div>
 </div>
 
@@ -395,41 +393,10 @@
     <p class="Copyright">Copyright 2023 - The 1975</p>
     </div>
   </footer>
+  
+ <!--------------End of footer-------------->
 
-  <script>
-    var MenuItems = document.getElementById("MenuItems");
-    MenuItems.style.maxHeight = "0px";
-    function menutoggle() {
-        if(MenuItems.style.maxHeight == "0px")
-        {
-            MenuItems.style.maxHeight = "200px";
-        }
-        else 
-        {
-            MenuItems.style.maxHeight = "0px";
-        }
-    }
-
-    window.addEventListener('scroll', reveal);
-    function reveal() {
-      var reveals = document.querySelectorAll('.reveal');
-
-      for(var i = 0; i < reveals.length; i++) {
-        var windowheight = window.innerHeight;
-        var revealtop = reveals[i].getBoundingClientRect().top;
-        var revealpoint = 150;
-
-        if (revealtop < windowheight - revealpoint) {
-          reveals[i].classList.add('activereveal');
-        }
-
-      }
-    }
-
-  </script>
-
-
-
+  <script src="script.js"></script>  <!---------Link to external js file----------->
 
   </body>
 </html>
